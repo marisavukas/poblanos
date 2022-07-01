@@ -1,0 +1,15 @@
+.cart_header {
+    font-family: var(--font-alt);
+    letter-spacing: .04em;
+    font-size: 2rem;
+    margin-left: .5rem;
+    margin-top: 2rem;
+    text-transform: uppercase;
+  }
+
+
+  basket_box {
+    font-family: var(--font-alt);
+    letter-spacing: .04em;
+
+  }

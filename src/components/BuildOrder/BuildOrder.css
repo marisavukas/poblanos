@@ -1,0 +1,14 @@
+.build_order_page {
+    height: 100vh;
+    width: auto;}
+    
+
+.build_order_header {
+    font-family: var(--font-base);
+    font-size: 2.5rem;
+    padding: .5rem;
+    margin: 0 .5rem;
+    display: flex;
+    justify-content: center;
+  
+    }

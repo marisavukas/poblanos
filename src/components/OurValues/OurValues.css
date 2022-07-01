@@ -1,0 +1,15 @@
+.ourvalues_page {
+    height: 100vh;
+    width: auto;}
+    
+
+.ourvalues_header {
+    font-family: var(--font-base);
+    font-size: 2.5rem;
+    padding: .5rem;
+    margin: 0 .5rem;
+    display: flex;
+    justify-content: center;
+  
+  
+    }
