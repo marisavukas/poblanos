@@ -62,8 +62,14 @@ body {
   }
   img.small {
     max-height: 10rem;
+    cursor:pointer;
   }
 
+  img.small:hover {
+    border-width: 1rem;
+    border: solid 5px red;
+    margin: auto;
+  }
   .order_header {
     font-family: var(--font-base);
     font-size: 2.5rem;
@@ -85,6 +91,8 @@ body {
   .food_header:first-child {
     margin-top: .5rem;
   }
+
+
 
   .order_button {
 
