@@ -67,7 +67,7 @@ body {
 
   img.small:hover {
     border-width: 1rem;
-    border: solid 5px red;
+    border: solid 5px #bf0008;
     margin: auto;
   }
   .order_header {
