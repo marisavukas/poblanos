@@ -2,14 +2,32 @@
     font-family: var(--font-alt);
     letter-spacing: .04em;
     font-size: 2rem;
-    margin-left: .5rem;
     margin-top: 2rem;
     text-transform: uppercase;
   }
-
+  /* .row {
+    text-align: left;
+  }
+  .row-2 {
+ margin-right: 2rem;
+    text-align: left;
+    margin-left:0;
+  } */
+  .cart_contents {
+    margin-left: 0;
+    padding-left: 0;
+  }
 
   basket_box {
     font-family: var(--font-alt);
     letter-spacing: .04em;
 
+  }
+
+
+
+
+   
+  .remove, .add {
+    display: none;
   }

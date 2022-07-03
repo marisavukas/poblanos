@@ -15,16 +15,13 @@
 }
 
 
+.checkmark {
+  
+    /* margin-top:-3rem;
+    margin-bottom: .5rem; */
+    color: #bf0008;
+    z-index: 100;   
+    /* display: flex; */
+    
 
-.checkmark{
-    margin-top:-3rem;
-    margin-bottom: .5rem;
-    color: blue;
-    z-index: 100;
-    display: flex;
-   
-}
-
-.small {
-    cursor: pointer;
 }

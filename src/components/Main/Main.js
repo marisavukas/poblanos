@@ -5,7 +5,7 @@ import './Main.css';
 
 
 export default function Main(props) {
-  const { foods, proteins, onAdd } = props;
+  const { foods, onAdd } = props;
 
 
   return (

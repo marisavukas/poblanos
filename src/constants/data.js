@@ -81,7 +81,6 @@ addOns: [
     name: 'Roasted Veggies',
     price: 0,
     image: 'https://dummyimage.com/300.png/000/fff',
-  
   },
 
   {

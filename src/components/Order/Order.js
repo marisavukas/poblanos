@@ -4,17 +4,14 @@ import Basket from '../Basket/Basket';
 import Main from '../Main/Main';
 import Checkout from '../Checkout/Checkout';
 import { MdCheckCircle } from 'react-icons/md';
-
 import {Link} from 'react-router-dom';
-
 import './Order.css';
-
-
+import Food from '../Food/Food';
 
 
 const Order = () => {
-    const { foods, proteins, addOns } = data;
-
+  
+    const { foods, proteins, addOns} = data;
     const [cartItems, setCartItems] = useState([]);
     const [check, setCheck] = useState(false);
     // const handleToggle = () => {
@@ -33,59 +30,47 @@ const Order = () => {
   
 
     const onAdd= (food) => {
- 
+     <Food isInCart= {true}/>
         const exist= cartItems.find((x) => x.id === food.id);
-        if (exist) {
-
-            setCartItems(
-                cartItems.map((x) =>
-                  x.id === food.id ? {...exist, qty: exist.qty + 1} : x
-                  )
-            
-               
-            );
-
-            
-
+        if (!exist) {
+          setCartItems([...cartItems, {...food, qty: 1}]);
+       
 
         } else {
-            setCartItems([...cartItems, {...food, qty: 1}]);
+           
+
 
         }
-        
     };
 
     const onRemove = (food) => {
-      setCheck(false);
+      // setCheck(false);
       console.log('removed');
         const exist = cartItems.find((x) => x.id === food.id);
         if (exist.qty === 1) {
             setCartItems(cartItems.filter((x) => x.id !== food.id));
         } else {
-            setCartItems(
-                cartItems.map((x) => 
-                  x.id === food.id ? {...exist, qty: exist.qty -1} : x)
-            );
+         
         }
         
     }
 
 
   return (
+    
     <div className="order_page">
     <h1 className="order_header">
         Order
     </h1>
+    
       <div x={cartItems.length}></div>
       <div className="food_options">
       <div className="grid"> 
 
       <h2 className="food_header">Choose One of the following</h2>
-
-        <Main foods = {foods} onAdd={onAdd}>
-
+        <Main  foods = {foods} onAdd={onAdd}>
         </Main>
-
+    
 
       <h2 className="food_header">Protein or Vegetarian</h2>
         <div className="protein_contents"> 
@@ -93,7 +78,7 @@ const Order = () => {
         </div>
 
       <h2 className="food_header">Top it off</h2>
-        <div className="topitoff_contents"> 
+        <div className="topitoff_contents">
           <Main foods = {addOns} onAdd={onAdd}></Main>
         </div>
 

@@ -124,15 +124,16 @@ body {
   .topitoff_contents div.food_price {
     display: none;
   }
+
+
   
 
-
-
-.checkmark {
-  margin-top:-3rem;
-  margin-bottom: .5rem;
-  color: green;
-  z-index: 100;   
-  display: flex;
  
-}
+
+checkmark {
+  margin-top:-3rem;
+  margin-bottom: .5rem; 
+  color: #bf0008;
+  z-index: 100;   
+   display: flex; 
+} 

@@ -16,6 +16,8 @@ export default function Basket(props) {
         {cartItems.map((item) => (
           <div key={item.id} className="row">
             <div className="row-2">{item.name}</div>
+            <div className="row-2">{item.qty} x ${item.price.toFixed(2)}</div>
+
             <div className="row-2">
               <button onClick={() => onRemove(item)} className="remove">
                 -
@@ -26,7 +28,7 @@ export default function Basket(props) {
             </div>
 
             <div className="row-2 text-right">
-              {item.qty} x ${item.price.toFixed(2)}
+              {/* {item.qty} x ${item.price.toFixed(2)} */}
             </div>
           </div>
           
