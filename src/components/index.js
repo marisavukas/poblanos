@@ -1,11 +1,12 @@
 import Home from './Home/Home';
 import Navbar from './Navbar/Navbar';
-import Order from './Order/Order';
+import BuildOrder from './BuildOrder/BuildOrder';
 import OurValues from './OurValues/OurValues';
 import Contact from './Contact/Contact';
 import Checkout from './Checkout/Checkout';
-import BuildOrder from './BuildOrder/BuildOrder';
-
+import OrderPage from './OrderPage/OrderPage';
+import MealMain from './MealMain/MealMain';
+import MealFood from './MealFood/MealFood';
 
 
 
@@ -15,9 +16,11 @@ import BuildOrder from './BuildOrder/BuildOrder';
 export {
 Home, 
 Navbar,
-Order,
 OurValues,
 Contact,
 Checkout,
-BuildOrder
+BuildOrder,
+OrderPage,
+MealMain,
+MealFood,
 };

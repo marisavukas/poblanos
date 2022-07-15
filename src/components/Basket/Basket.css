@@ -18,16 +18,19 @@
     padding-left: 0;
   }
 
-  basket_box {
+
+/*FOR .basket_box, CHANGE DISPLAY SETTING ONCE YOU IMPLEMENT CHECKOUT PAGE*/
+  .basket_box {
     font-family: var(--font-alt);
     letter-spacing: .04em;
-
+    display: flex;
   }
+
 
 
 
 
    
-  .remove, .add {
+  /* .remove, .add {
     display: none;
-  }
+  } */

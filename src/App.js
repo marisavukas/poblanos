@@ -1,7 +1,7 @@
 import React from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { MdOutlineRestaurantMenu } from 'react-icons/md';
-import { Navbar, Order, Home, OurValues, Contact, Checkout, BuildOrder  } from './components';
+import { Navbar, BuildOrder, Home, OurValues, Contact, Checkout, OrderPage  } from './components';
 import { Footer  } from './container';
 
 
@@ -10,6 +10,8 @@ import './App.css';
  
 
 function App() {
+  
+  
   return(
     <div className="app">
   <BrowserRouter>
@@ -19,12 +21,16 @@ function App() {
 
     <Route exact path = "/" element={<Home />}/>
 
-    <Route path = "/order" element={<Order />}/>
+    <Route path = "/orderpage" element={<OrderPage />}/>
+    
 
     <Route path = "/ourvalues" element={<OurValues />}/>
 
     <Route path = "/contact" element={<Contact />}/>
     <Route path = "/checkout" element={<Checkout />}/>
+
+    <Route path = "/buildorder" element={<BuildOrder />}/>
+
 
 
 

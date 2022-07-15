@@ -1,14 +1,564 @@
-.build_order_page {
-    height: 100vh;
-    width: auto;}
-    
+.order_page {
+  width:auto;
+}
 
-.build_order_header {
+body {
+    font-family: 'Helvetica';
+  }
+  h1,
+  h2,
+  h3 {
+    margin: 0.5rem 0;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+  a {
+    text-decoration: none;
+  }
+  /* .food_options {
+    display: inline;
+    justify-content: space-between;
+    margin: 30px;
+  } */
+  .grid {
+    min-width: 46vw;
+    /* grid-template-columns: 20% 20%; */
+    /* display: grid; */
+    /* margin: 0rem 1rem 0px 1rem; */
+    font-family: var(--font-alt);
+
+  }
+
+  .build_your_text_contents {
+    display: flex;
+    align-items: flex-start;
+    justify-content:center;
+    flex-direction: column;
+    margin: 5rem 0rem 2rem 0rem;
+    flex-wrap: wrap;
+
+  }
+
+
+
+  .build_order_meal_title {
+    font-size: 4rem;
+    width: fit-content;
+    text-transform: uppercase;
+    margin-bottom: 0rem;
+    padding-bottom: 0rem;
+
+
+    height: auto;
+    color: rgb(68, 20, 20);
+    font-family: var(--font-alt);
+
+    text-align: left;
+
+    
+  }
+
+  
+
+  .build_your {
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 2rem;
+
+    color: rgba(68, 20, 20, 0.721);
+    font-family: var(--font-long);
+    font-weight: 600;
+
+
+
+  }
+  .build_order_meal_description {
+    font-family: var(--font-long);
+    font-size: 1.5rem;
+    margin-top: 1rem ;
+    margin-bottom:auto;
+    margin-right:0rem;
+    max-width: 40rem;
+    min-width: 25rem;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+
+
+
+  .text-right {
+    text-align: right;
+  }
+  img.small {
+    max-height: 10rem;
+    width: 15rem;
+    height: 10rem;
+    /* cursor: pointer; */
+    margin-left: 0;
+    margin-bottom: 0;
+    margin-right: 2rem;
+    padding-left: 0;
+   
+
+    /* linear-gradient(
+      to top, 
+      red, 
+      white(0, 0, 0, 0)
+    ) 1 100%; */
+
+  }
+
+  img.large {
+    max-height: 30rem;
+    height: 25rem;
+    width: 40rem;
+    /* cursor: pointer; */
+    margin-left: 0;
+    margin-bottom: 0;
+    margin-right: 2rem;
+    padding-left: 0;
+  }
+
+/* 
+  img.small:hover {
+    border-width: 1rem;
+    border: solid 5px #bf0008;
+    margin: auto;
+  } */
+  /* .basket_section {display:none;} */
+
+  
+  .order_header {
     font-family: var(--font-base);
     font-size: 2.5rem;
+    color: black;
     padding: .5rem;
-    margin: 0 .5rem;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    margin-bottom: 2rem;
+  }
+
+  .food_header {
+    font-family: var(--font-alt);
+    color: rgb(68, 20, 20);
+    font-size: 2.7rem;
+    letter-spacing: .06em;
+    margin-left: 1rem;
+    text-transform: uppercase;
+  }
+
+  .food_description {
+    font-family: var(--font-long);
+    font-size: 1.5rem;
+    letter-spacing: .04em;
+    font-weight: bolder;
+    flex-direction: row;
+    display: flex;
+    margin: 0rem 1rem;
+    padding: auto;
+    color: rgba(68, 20, 20, 0.721);
+
+
+  }
+
+  .food_header:first-child {
+    margin-top: .5rem;
+
+    
+  }
+
+
+  .order_button:hover {
+    background-color: rgb(48, 48, 48);
+
+  }
+
+
+  .col-1 {
+    flex: 1;
+  }
+  /* .col-2 {
+    flex: 0;
+  }  */
+
+
+
+  .order_button {
+    cursor: pointer;
+    display:flex;
+    margin-bottom: 0;
+    z-index:2;
+    text-transform: uppercase;
+    width: auto;
+    background-color: black;
+    font-size: 1.5rem;
+    color: white;
+    border-style: none;
+    padding: .9rem 6rem;
+    font-family: var(--font-alt);
+    letter-spacing: .12em;
+    margin-top: 0rem;
+    flex-wrap: nowrap;
+    margin-left: .7rem;
+    margin-right: 6rem;
+    text-align: center;
+
+  }
+  .your_meal_text {
+    display: none;
+    
+  }
+  .calories_and_price{
+    display: flex;
+    flex-direction: row;
+    margin-top: 1.6rem;
+  }
+
+  .protein_contents div.food_price {
+    display: flex;
+    margin-left: 4.5rem;
+    /* margin-top:-1.76rem; */
+    font-family: var(--font-text);
+    color: rgba(68, 20, 20, 0.721);
+    font-size: 1.25rem;
+    /* width: fit-content; */
+
+  }
+
+
+  .protein_contents div.food_new {
+    font-size: 1.35rem;
+    color: white;
+    background-color: #bf0008; 
+    border-radius: 10%; 
+    display: flex;
+    /* float: inline-start; */
+    width: 50px;
+    justify-content: center;    
+    letter-spacing: .065em;
+    margin-left: 15.1rem;
+    margin-top: -3.47rem;
+    padding: 0;
+    /* 
+    margin-bottom: -4rem;*/
+    /* padding:.3rem; */
+  
+  }
+
+
+
+
+  .topitoff_contents div.food_price {
+    display: none;  }
+
+    
+
+   .grid:last-child .food_price{
+      display: flex;
+      margin-left: 4.5rem;
+      /* margin-top:-1.76rem; */
+      font-family: var(--font-text);
+      color: rgba(68, 20, 20, 0.721);
+      font-size: 1.25rem;  }
+
+  .rice_contents div.food_price:last-child {
+    display: none;
+    margin-left: 4.5rem;
+
+  }
+
+  .bean_contents div.food_price:last-child {
+    display: none;
+ }
+
+/* img_small:last-child {
+  width:20px;
+ } */
+
+  /* 
+  .back_to_menu {
+    display: flex;
+    justify-content: flex-start;
+    letter-spacing: .05em;
+    margin-bottom: .5rem;
+    margin-right: 1rem;
+    padding: 1rem;
+    font-size: 1.7rem;
+    color: #bf0008;
+  }
+
+  .back_to_menu:hover{
+    color: #bf0008;
+  }
+
+  .back_to_menu::after {
+    content: "";
+    height: 3px;
+    width: 0%;
+    left: 0;
+    bottom: -10px;
+    transition: .3s ease-in-out;
+    display: block;
+
+  }
+
+  .back_to_menu:hover::after {
+    content:'';
+    height: 3px;
+    width: 40%;
+    background-color:#bf0008;
+      display: block;
+  }
+
+
+
+
+  .back_to_menu_container {
+    display: flex;
+    justify-content: flex-start;
+    font-family: var(--font-alt);
+    margin-right: 3rem;
+    margin-left: 60%;
+    margin-bottom: -6.2rem;
+    width: auto;
+    font-size: 1.5rem;
+    margin-top: -2rem;
+
+  } */
+
+
+
+
+
+  .cart_stuff {
+    z-index: 94;
+    color: black;
+    font-family: var(--font-text);
+    text-transform: uppercase;
+    font-weight: 100;
+    letter-spacing: .05em;
+    font-size: 1.5rem;
+
+  }
+
+
+  .add_to_cart_footer {
+    position: sticky;
+    z-index: 93;
+    bottom:0;
+    width: 100%;
+    height: auto;
+    font-family: var(--font-long);
+    text-transform: uppercase;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 100;
+    letter-spacing: .05em;
+    margin-top: 0;
+    background: rgb(249, 249, 249);
+    padding: 1rem 2rem 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    border-top: solid .12rem #d5d5d5;  
+}
+
+.order_button {
+  margin-right: 0;
+}
+
+
+
+
+
+
+@media screen and (min-width: 1151px) {
+  /* .choose_build_order_items{
+    display: flex;
+    width: fit-content;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  } */
+ 
+  .grid {
+    /* justify-content: space-between; */
+    width:40%;
+    flex-direction: row;
+    display: inline;
+    margin: 1rem;
+    padding: auto;
+    /* align-content: center; */
+  }
+  .grid:last-child {
+    justify-content: space-between;
+    width:40%;
+    flex-direction: row;
+    display: inline;
+    margin: 1rem;
+    padding: auto;
+    align-content: left;
+  }
+  
+
+
+}
+
+@media screen and (max-width:1150px) {
+  /* .food_stuff {
+    border: solid 1px black;
+  } */
+  .build_order_meal_description {
+    font-family: var(--font-long);
+    font-size: 1.5rem;
+    margin-top: 1rem ;
+    margin-bottom:auto;
+    margin-right:0rem;
+    max-width: fit-content;
+    min-width: 25rem;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+
+  .order_page{
+    width:auto;
+  }
+
+  .food_header {
+    font-size: 2.0rem;
+    letter-spacing: .06em;
+    margin-left: 1rem;
+    padding: 0rem;
+    text-transform: uppercase;
+  }
+
+
+ .build_your_text_contents {
+  margin: 2rem 1rem 2rem 1rem;
+}
+
+.food_description {display: none;}
+
+
+
+  .order_header {
+    font-family: var(--font-base);
+    font-size: 2.5rem;
+    color: black;
+    padding: 0rem;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: .5rem;
+  }
+  
+  img.large {
+    /* cursor: pointer; */
+   margin: auto;
+    /* padding-left: 0; */
     display: flex;
     justify-content: center;
-  
-    }
+    text-align: center;
+    max-height: 15rem;
+    width: 19rem;
+    height: 12rem;
+    /* cursor: pointer; */
+   
+  }
+
+ 
+  .back_to_menu_arrow:hover {
+
+    color: #ab010a;
+  }
+  .add_to_cart_footer{
+    padding: 0;
+    min-width: none;
+
+  }
+  .order_button  {
+
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    background-color: black;
+    margin: 0rem;
+    
+    padding: 1.2rem;
+
+  }
+
+
+  .order_button:hover {
+    background-color: rgba(0, 0, 0, 0.788);
+
+  }
+
+  .grid{
+    margin: 0rem 0rem ;
+
+  }
+  .grid:first-child{
+    margin-top:  1rem ;
+
+  }
+}
+
+@media screen and (max-width: 650px) { 
+  .build_order_meal_description {
+
+    max-width: fit-content;
+    min-width: auto; }
+
+
+
+    img.small {
+      max-height: 8rem;
+      width: 7rem;
+      height: 6rem;
+      /* cursor: pointer; */
+      margin-left: 0;
+      margin-bottom: 0;
+      margin-right: 2rem;
+      padding-left: 0;
+
+}
+
+.build_your {
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-family: var(--font-alt);
+  letter-spacing: .06em;
+}
+
+.protein_contents div.food_new {
+  font-size: 1rem;
+  color: white;
+  background-color: #bf0008; 
+  border-radius: 10%; 
+  display: flex;
+  /* float: inline-start; */
+  width: 50px;
+  justify-content: center;    
+  letter-spacing: .065em;
+  margin-left: 8.0rem;
+  margin-top: -3.47rem;
+  /* 
+  margin-bottom: -4rem;*/
+  /* padding:.3rem; */
+
+}
+
+}
+
+

@@ -1,11 +1,13 @@
+
+  
 .home_header {
     font-family: var(--font-base);
     display: flex;
-    background-color: white;
-    color: black;
+    background-color:var(--color-black);
+    color: white;
     justify-content: center;
-    margin: .5rem 0 -1rem 0;
-    padding:.5rem 1rem 0rem 1rem;
+    margin:0 0 -1rem 0;
+    padding:.5rem 1rem .5rem 1rem;
     font-size: 4rem;
     letter-spacing: 0.04em;
 }
@@ -14,8 +16,12 @@
 .homepage {
   height: 100vh;
   width:100%;
+  background-color: var(--color-black) ;
+
+
 
 } 
+
 /* 
 
     background-color: white;
@@ -36,10 +42,10 @@
     /* position: relative; */
 }
 
-.order_button {
-    display: flex;
-    margin-bottom: 0;
-    z-index:2;
+.order_now_button {
+    cursor:pointer;
+    justify-content: center;
+    display: block;
     text-transform: uppercase;
     width: auto;
     background-color: #bf0008;
@@ -49,13 +55,14 @@
     padding: .9rem 5rem;
     font-family: var(--font-alt);
     letter-spacing: .07em;
-    margin-top: 5rem;
-    flex-wrap: nowrap;
+    flex:1;
+    margin-top: 6vh;
+
 }
 
 
 
-video {
+video, .app__video-overlay  {
     height: 90%;
     margin-top: 0;
     padding-top: 0;
@@ -70,21 +77,84 @@ video {
   
 }
 
-/* 
+.new_section_and_order_button {
+    width: auto;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-content: center;
+    align-items: center;
+    margin-top: 10vh;
+    /* margin-bottom: -10rem; */
+    font-family: var(--font-alt);
+    color: var(--color-white);
+    
+}
+
+.new_stamp {
+    font-size: 2.5rem;
+    font-weight: 100;
+    width: auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    background-color: #f09b50;
+    border-radius:10%;
+    padding: .2rem;
+    margin: auto;
+
+}
+
+.new_steak {
+    font-size: 4rem;
+    display: flex;
+    flex:1;
+    justify-content: center;
+}
+
+.new_steak_description {
+    font-size: 1.5rem;
+    display: flex;
+    width: auto;
+    min-width: 60%;
+    text-align: center;
+    justify-content: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    padding: 1rem;
+    margin: 0 2rem;
+    line-height: 2rem;
+
+
+}
+
+hr {
+    color:  #d5d5d5;
+    padding: 0 3rem;
+    z-index: 80;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    width: 60vw;
+
+
+} 
 
 .app__video-overlay {
-    position: absolute;
+    /* position: absolute;
     height: 70%;
     display: flex;
-    align-items: center;
-    background: rgba(0, 0, 0, 0.5);
-    flex-direction: column;
+    align-items: center; */
+    background: rgba(28, 27, 27, 0.5);
+    /* flex-direction: column;
     justify-content: center;
     width: 100%;
     margin: 0 ;
-    padding: 4vh 0 0 0 ;
+    padding: 4vh 0 0 0 ; */
 }
 
+
+/* 
 
 
 .app__video-overlay_circle {
@@ -100,3 +170,61 @@ video {
 }
  */
 
+
+@media screen and (max-width: 1150px) {
+        .order_now_button {
+        margin-top: 2vh;
+    
+    }
+
+    
+
+ }
+
+/* @media screen and (min-width: 1150px) { 
+    .order_now_button {
+
+        margin-top: 1vh;
+    
+    }
+    .new_section_and_order_button {
+        justify-content: center;
+    }
+
+} */
+   
+
+@media screen and (max-width: 650px) {
+    /* .new_section_and_order_button {
+        margin-top:-3rem;
+    } */
+    .new_steak_description {
+        font-size: 1.2rem;
+    }
+    .new_stamp {
+        font-size: 1.5rem;
+    }
+    .new_steak {
+        
+       font-size: 2.8em;
+        
+    }
+    hr {
+        width: 100vw;
+        color: #ff0d09;
+
+    } 
+
+    
+    .home_header {
+
+
+        text-align: center;
+        line-height: auto;
+    }
+
+    .order_now_button {
+        margin-top: 0rem;
+    }
+
+}

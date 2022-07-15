@@ -1,5 +1,4 @@
 
-
 .section__padding {
   padding: 4rem 6rem;
 }
@@ -65,7 +64,7 @@
 
 .p__cormorant {
   font-family: 'Helvetica';
-  color: var(--color-white);
+  color: var(--color-black);
   font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: capitalize;
@@ -76,7 +75,7 @@
 
 .p__opensans {
   font-family: 'Helvetica';
-  color: var(--color-white);
+  color: var(--color-black);
   font-weight: 400;
   letter-spacing: 0.04em;
   text-transform: capitalize;

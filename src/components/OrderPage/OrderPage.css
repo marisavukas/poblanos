@@ -1,0 +1,491 @@
+.order_page {
+  width: auto;
+}
+
+.meal_name {
+  /* font-size: 4rem; */
+}
+
+.orderpage_food_title {
+font-size: 2.5rem;
+display: flex;
+justify-content: center;
+}
+  
+  
+  
+  .meal_contents {
+    /* z-index:1000; */
+    
+
+
+  }
+
+.meal_options_display {
+  row-gap: 30px;
+  grid-template-columns: 400px 400px;
+  justify-content: center;
+  align-items: center;
+  padding: auto;
+  margin: auto;
+  margin-bottom: 20px;
+  
+}
+
+.order_arrow{
+  margin-bottom: -.2rem;
+  display: none;
+
+}
+.order_now_text {
+  display: none;
+  text-align: center;
+  /* display: flex; */
+  margin-top: 1rem;
+  font-family: var(--font-long);
+  letter-spacing: .06em;
+  padding-top: 2rem;
+  z-index: -1;
+  margin-top: -8.5rem;
+  margin-bottom: -1rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  text-transform: none;
+  color: rgba(68, 20, 20, 0.721);
+
+
+}
+.meal_image {
+  cursor: pointer;
+  width: auto;
+  height: 25vh;
+  margin-top:.5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  z-index: 10;
+  justify-content: center;
+  /* border-bottom: 0rem solid white; */
+
+  
+}
+
+
+/* .meal_image:hover {
+  width: 100%;
+  height: 30vh;
+  margin-top:.5rem;
+  margin-bottom: 4rem;
+  z-index: 10;
+  border-bottom: 4rem solid transparent;
+
+  
+} */
+
+
+
+
+
+.meal_choices {
+  z-index:11;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: auto;
+  justify-content: center;
+  padding: 1rem 5rem;
+
+} 
+
+.choose_one_order_page_header {
+  font-family: var(--font-base);
+  margin: 1rem;
+  color: rgb(68, 20, 20);
+  font-size: 2.7rem;
+  letter-spacing: .03em;
+  font-weight: 500;
+  text-align: center;
+  text-transform: none;
+}
+  
+  .meal_name {
+    z-index:1;
+    font-family: var(--font-text);
+    display: flex;
+    font-size: 3rem;
+    margin: 0rem 0rem;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: nowrap;
+    text-transform: uppercase;
+    text-align: center;
+
+   
+  }
+
+  .build_order_button {
+      cursor: pointer;
+      display: flex;
+
+      justify-content: center;
+      z-index:2;
+      text-transform: uppercase;
+      width: 100%;
+      background-color: rgb(68, 20, 20);     
+      font-size: 1.5rem;
+      color: white;
+      border-style: none;
+      padding: 1.5rem 6rem;
+      font-family: var(--font-alt);
+      letter-spacing: .12em;
+      text-align: center;
+  
+    
+
+  }
+  .build_order_button:hover {
+  
+    background-color: rgba(68, 20, 20, 0.796);
+
+    color: white;
+   
+
+  
+
+}
+
+.orderpage_image {
+
+  max-height: 10rem;
+  width: 15rem;
+  height: 10rem;
+  display: flex;
+  padding:1rem;
+  justify-content: center;
+  /* cursor: pointer; */
+  margin-left: 0;
+  margin-bottom: 0;
+  margin-right: 0rem;
+  padding-left: 0;
+ 
+}
+
+.orderpage_food_and_checkbox col-1 {
+  display: flex;
+  justify-content: center;
+
+} 
+
+
+
+
+  .build_order_arrow {
+    color: white;
+    display: flex;
+    justify-content: center;
+  }
+
+  .orderpage_food_box {
+  background-color: white;
+  display:block;
+  flex-direction: row;
+  min-width: fit-content;
+  width: auto;
+  flex-wrap: wrap;
+  padding: 0rem 0rem 0rem 0;
+  border: solid .12rem #d5d5d5;  
+
+}
+.orderpage_food_box_clicked {
+  background-color: white;
+  display:block;
+  flex-direction: column;
+  justify-content: center;
+  width: auto;
+  min-width: fit-content;
+
+  flex-wrap: wrap;
+  padding: 0rem 0rem 0rem 0;
+  border: solid .12rem black;  
+
+}
+.orderpage_checkmark {
+  /* margin-left: -13rem; */
+  margin-left: 6.5rem;
+  margin-top: -10rem;
+  margin-bottom: 4rem;
+  width:4rem;
+  height: 4rem;
+  color: black;
+  background-color: white;
+  border-radius: 50%;
+  z-index: 90;   
+} 
+
+.orderpage_checkmark_transparent {
+    /* margin-left: -13rem; */
+    margin-left: 6.5rem;
+    margin-top: -10rem;
+    margin-bottom: 4rem;
+    width:4rem;
+    height: 4rem;
+    color: transparent;
+    background-color: transparent;
+    border-radius: 50%;
+    z-index: 90;   
+}
+
+
+.orderpage_meal_options_display {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 20px;
+  min-width: fit-content;
+  
+}
+
+
+
+.order_page_footer_contents {
+  width: auto;
+  z-index: 94;
+  position: sticky;
+  color: black;
+  font-family: var(--font-text);
+  text-transform: uppercase;
+  font-weight: 100;
+  letter-spacing: .05em;
+  font-size: 1.5rem;
+
+}
+
+
+.build_order_footer {
+  z-index: 93;
+  position: sticky;
+  bottom:0;
+  width: 100%;
+  height: auto;
+  font-family: var(--font-long);
+  text-transform: uppercase;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 100;
+  letter-spacing: .05em;
+  margin-top: 0;
+  background: rgb(249, 249, 249);
+  padding: 1rem 2rem 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  border-top: solid .12rem #d5d5d5;  
+}
+
+
+
+
+@media screen and (min-width: 1151px) {
+  .orderpage_food_box:hover {
+    column-gap: 1rem;   
+    cursor: pointer;
+    padding: 0rem 0rem 0rem 0;
+    border: solid .12rem black; 
+  } 
+}
+.orderpage_grid {
+  font-family: var(--font-alt);
+  color: rgb(68, 20, 20);
+  display: block;
+  margin: .5rem 3% .5rem 25% ;
+  flex-direction: row;
+  justify-content: center;
+
+}
+
+.orderpage_grid:nth-child(2n) {
+  font-family: var(--font-alt);
+  display: block;
+  margin: .5rem 25% .5rem 3%;
+  flex-direction: row;
+  justify-content: center;
+
+}
+
+
+
+
+  @media screen and (max-width: 1150px) {
+    .orderpage_food_box {
+      border-top: solid 1px #d5d5d5;
+      border-left: solid 1px #d5d5d5;
+      border-right: solid 1px #d5d5d5;
+      background-color: white;
+      display:block;
+      flex-direction: row;
+      min-width: fit-content;
+      width: auto;
+      flex-wrap: wrap;
+      padding: 0rem 2rem 0rem 0;
+      border: solid .12rem #d5d5d5; 
+  
+    }
+
+    .orderpage_grid {
+      font-family: var(--font-alt);
+      display: block;
+      margin: 0rem;
+      flex-direction: row;
+      justify-content: center;
+    
+    }
+    .orderpage_grid:nth-child(2n) {
+      font-family: var(--font-alt);
+      display: block;
+      margin: 0rem;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    .orderpage_food_title {
+      margin: auto;
+      margin-top:-8rem;
+      margin-bottom:4rem ;
+      margin-left: 16rem;
+      text-align: left;
+      justify-content: flex-start;
+    }
+
+     
+    .build_order_footer {
+      border-top: none;  
+    
+    }
+    
+  
+    .orderpage_food_box_clicked {
+      border-top: solid 1px black;
+      border-left: solid 1px black;
+      border-right: solid 1px black;
+      background-color: white;
+      display:block;
+      flex-direction: column;
+      justify-content: center;
+      width: auto;
+      min-width: fit-content;
+    
+      flex-wrap: wrap;
+      padding: 0rem 0rem 0rem 0;
+      border: solid .12rem black;  
+  
+    }
+    .orderpage_food_box:hover {
+      cursor: pointer;
+  
+    }
+
+    .meal_image {
+      /* flex-wrap: wrap ;
+      display: flex;
+      width: auto;
+      justify-content: center; */
+
+    }
+    .orderpage_grid {
+    /* min-width: 46vw; */
+    /* grid-template-columns: 20% 20%; */
+    /* display: block;
+    width: auto;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0rem 1rem 0px 1rem;
+
+    font-family: var(--font-alt); */
+  }
+
+    .meal_choices {
+      display: flex;
+      flex-direction: column;
+      margin:0rem 2rem;
+      flex-wrap: wrap;
+    }
+
+    .order_page_footer_contents {
+      z-index: 94;
+      position: sticky;
+      color: black;
+      font-family: var(--font-text);
+      text-transform: uppercase;
+      font-weight: 100;
+      letter-spacing: .05em;
+      font-size: 1.5rem;
+  
+    }
+
+
+    .build_order_footer {
+      z-index: 93;
+      position: sticky;
+      bottom:0;
+      width: auto;
+      height: auto;
+      font-family: var(--font-long);
+      text-transform: uppercase;
+      color: white;
+      font-size: 1.1rem;
+      font-weight: 100;
+      letter-spacing: .05em;
+      margin-top: 0;
+      background: rgb(249, 249, 249);
+      padding:0;
+      display: flex;
+      /* justify-content: flex-start; */
+      /* border-top: solid .12rem #d5d5d5;   */
+  }
+
+    .orderpage_meal_options_display {
+      display: block;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: auto;
+      margin: auto;
+      margin-bottom: 20px;
+      
+    }
+
+    .build_order_button{
+      margin:0;
+      width: 100%;
+
+      display: flex;
+    }
+  }
+
+
+  @media screen and (max-width: 650px) {
+  [class*="col-"] {
+      width: 100%;
+    }
+
+
+/* .orderpage_grid:nth-child(2n), .orderpage_grid {
+  margin:0;
+} */
+
+
+  .orderpage_grid {
+/* margin: 0 .7rem;   */
+}
+
+  .orderpage_food_box{
+    display: block;
+    grid-row: 0;
+    min-width: fit-content;
+  }
+
+  
+}

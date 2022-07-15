@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect } from 'react';
 import './Basket.css';
 
 export default function Basket(props) {
@@ -7,6 +8,10 @@ export default function Basket(props) {
   const taxPrice = itemsPrice * 0.14;
 //   const shippingPrice = itemsPrice > 2000 ? 0 : 20;
   const totalPrice = itemsPrice + taxPrice;
+
+
+//   
+
   return (
     <div className="basket_box">
     <div className="block row-2">
