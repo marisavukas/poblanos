@@ -30,7 +30,7 @@ const Navbar = () => {
         </ul>
         <Link to = "/checkout"><><MdOutlineShoppingBag className="checkout_bag"/></></Link>
         <div className="back_to_menu">
-        <Link to = "/orderpage">Return to Menu</Link>
+        <Link to = "/orderpage">Menu</Link>
 
 
         </div>

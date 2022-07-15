@@ -129,7 +129,8 @@ video, .app__video-overlay  {
 }
 
 hr {
-    color:  #d5d5d5;
+    color: transparent;
+    background-color: black;;
     padding: 0 3rem;
     z-index: 80;
     display: flex;
@@ -211,7 +212,7 @@ hr {
     }
     hr {
         width: 100vw;
-        color: #ff0d09;
+        color: black;
 
     } 
 

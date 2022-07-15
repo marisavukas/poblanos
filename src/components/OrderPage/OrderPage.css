@@ -459,7 +459,7 @@ justify-content: center;
 
     .build_order_button{
       margin:0;
-      width: 100%;
+      width: 100vw;
 
       display: flex;
     }
@@ -471,10 +471,72 @@ justify-content: center;
       width: 100%;
     }
 
+    .build_order_button{
+padding:auto;      
+width: 100%;
 
+      display: flex;
+      justify-content: center;
+    }
+
+    .orderpage_checkmark {
+      /* margin-left: -13rem; */
+      margin-left: .5rem;
+      margin-top: -8rem;
+      margin-bottom: 2rem;
+      width:2.3rem;
+      height: 2.3rem;
+      color: black;
+      background-color: white;
+      border-radius: 50%;
+      z-index: 90;   
+    } 
+    
+    
+    .orderpage_checkmark_transparent {
+        /* margin-left: -13rem; */
+        margin-left: .5rem;
+        margin-top: -8rem;
+        margin-bottom: 2rem;
+        width:2.3rem;
+        height: 2.3rem;
+        color: transparent;
+        background-color: transparent;
+        border-radius: 50%;
+        z-index: 90;   
+    }
+
+    .orderpage_food_title {
+      margin: auto;
+      margin-top:-5rem;
+      margin-bottom:2rem ;
+      margin-left: 9rem;
+      text-align: left;
+      font-size: 1.2rem;
+      justify-content: flex-start;
+    }
 /* .orderpage_grid:nth-child(2n), .orderpage_grid {
   margin:0;
-} */
+} */  .orderpage_image {
+    /* cursor: pointer; */
+   margin: auto;
+    /* padding-left: 0; */
+    display: flex;
+    justify-content: center;
+
+    max-height: 8rem;
+    width: 7rem;
+    height: 6rem;
+    /* cursor: pointer; */
+    margin-left: 0;
+    margin-bottom: 0;
+    margin-right: 2rem;
+    padding-left: 0;
+    text-align: center;
+  
+    /* cursor: pointer; */
+   
+  }
 
 
   .orderpage_grid {
@@ -485,6 +547,18 @@ justify-content: center;
     display: block;
     grid-row: 0;
     min-width: fit-content;
+  }
+
+  .build_order_footer {
+   justify-content: center;
+   display: block;
+   margin: 0;
+  
+  }
+
+  .order_page_footer_contents {
+   margin:0;
+
   }
 
   

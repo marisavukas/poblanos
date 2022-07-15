@@ -467,6 +467,8 @@ body {
     /* padding-left: 0; */
     display: flex;
     justify-content: center;
+
+    
     text-align: center;
     max-height: 15rem;
     width: 19rem;
@@ -558,6 +560,9 @@ body {
   /* padding:.3rem; */
 
 }
+
+
+
 
 }
 
