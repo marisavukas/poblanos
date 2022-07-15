@@ -257,9 +257,6 @@ body {
 
 
 
-  .topitoff_contents div.food_price {
-    display: none;  }
-
     
 
    .grid:last-child .food_price{
@@ -522,6 +519,8 @@ body {
     min-width: auto; }
 
 
+    .topitoff_contents div.food_price {
+      display: none;  }
 
     img.small {
       max-height: 8rem;
@@ -559,6 +558,10 @@ body {
   margin-bottom: -4rem;*/
   /* padding:.3rem; */
 
+}
+
+.topitoff_contents div.food_price:last-child {
+display: none;
 }
 
 

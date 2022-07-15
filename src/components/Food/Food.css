@@ -101,6 +101,10 @@
     
   }
 
+  .protein_contents div.food_price {
+    display:none;
+  }
+
   .food_stuff:last-child {
     justify-content: flex-start;
   }
@@ -212,5 +216,16 @@ margin: 0 .7rem;
     z-index: 90;   
   } 
 
+.food_subheading {
+  display:flex;
+  margin-left: 8rem;
+  margin-top: 0rem;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: .05em;
+  font-family: var(--font-long);
+  color: rgba(68, 20, 20, 0.721);
+
+}
   
 }
