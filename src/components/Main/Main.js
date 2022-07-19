@@ -15,6 +15,8 @@ export default function Main(props) {
     <> 
     <div className="block col-2">
       <div className="food_stuff">
+      <hr className="food_contents_hr"/>
+
         {foods.map((food) => (
           <> 
           <Food key={food.id} food={food} onAdd={onAdd} cartItems= {cartItems}/>

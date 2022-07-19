@@ -43,7 +43,7 @@ const BuildOrder = (props) => {
 
     useEffect(() => {
 
-      window.localStorage.setItem('bag-items', JSON.stringify(bagArr));
+      window.localStorage.setItem('build-order-items', JSON.stringify(bagArr));
       
     },[bagArr]);
 
@@ -198,9 +198,10 @@ const BuildOrder = (props) => {
       </div>
       </div> */}
       <h2 className="food_header">Protein or Veggie</h2>
+
         <h3 className="food_description">Choose one of the following.</h3>
         <div className="protein_contents"> 
-        
+
           <Main foods = {proteins} onAdd={onAddProtein} cartItems={proteinItems}></Main>
         </div>
 

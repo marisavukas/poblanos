@@ -15,7 +15,7 @@ const Home = () => {
   const vidRef = React.useRef();
   return (
     <div className="homepage">
-    <hr></hr>
+    <hr className="home_hr"></hr>
         <h1 className="home_header">Poblano's Grill</h1>
     <div className="overlay__video"> 
     <div className="app_video">

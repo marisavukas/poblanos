@@ -128,7 +128,7 @@ video, .app__video-overlay  {
 
 }
 
-hr {
+.home_hr {
     color: transparent;
     background-color: black;;
     padding: 0 3rem;
@@ -210,9 +210,9 @@ hr {
        font-size: 2.8em;
         
     }
-    hr {
-        width: 100vw;
-        color: black;
+    .home_hr {
+        width: auto;
+        background-color: black;
 
     } 
 

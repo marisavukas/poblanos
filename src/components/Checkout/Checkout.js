@@ -7,31 +7,23 @@ import './Checkout.css';
 const Checkout = (props) => {
   const [bagItems, setBagItems] = useState([]);
   const {mealItems}=props;
-  const { onAdd, cartItems, proteinItems,beansItems, riceItems, addOnItems, bagArr, mealArrString } = props;
+  const {bagArr, mealArrString } = props;
 
-    const bagArrString= window.localStorage.getItem('bag-items', JSON.stringify(bagArr));
-    const parsedBagArrString= JSON.parse(bagArrString);
-    console.log(parsedBagArrString);
+
+
+  const bagArrString= window.localStorage.getItem('build-order-items', JSON.stringify(bagArr));
+  const parsedBagArrString= JSON.parse(bagArrString);
+    // console.log(parsedBagArrString);
+
 
 
     const mealString= window.localStorage.getItem('meal-selected', JSON.stringify(mealArrString));
     const parsedMealString= JSON.parse(mealString);
+    // console.log(parsedMealString);
 
-    console.log(parsedMealString);
+    localStorage.setItem('order', JSON.stringify([...parsedMealString, ...parsedBagArrString]));
 
-
-    // const mealArrString= window.localStorage.getItem('meal-items', JSON.stringify(mealItems));
-    // const parsedMealArrString= JSON.parse(mealArrString);
-    // console.log(parsedMealArrString);
-
-    // const deleteMeal= () => {
-
-    //   const mealString= window.localStorage.getItem('meal-selected', JSON.stringify(mealArrString));
-
-    // window.localStorage.removeItem(parsedMealString);
-
-
-    // }
+  
   
   return (
     <div className="checkout_page"> 
@@ -46,11 +38,10 @@ const Checkout = (props) => {
           {parsedMealString.map((item) => (
             <div key={item.id} className="row">
               <div className="row-2">{item.name}</div>
-              {/* <button className="delete_meal_button">Delete Meal</button> */}
 
             </div>
             
-))}
+          ))}
 
         </div>
         
@@ -92,3 +83,22 @@ const Checkout = (props) => {
 }
 
 export default Checkout;
+
+// let newData= JSON.parse(localStorage.getItem('new-items'));
+// // console.log([...oldData]);
+
+// useEffect(() => {
+//   let oldData= JSON.parse(localStorage.getItem('items'));
+
+//   if (oldData) {
+
+//     setBagItems([...oldData]);
+
+//   }
+// }, []);
+
+
+
+
+// localStorage.setItem('saved-cart-items', JSON.stringify([...newData,...bagItems]));
+

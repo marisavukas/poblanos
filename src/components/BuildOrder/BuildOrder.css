@@ -71,14 +71,13 @@ body {
     text-align: left;
     text-transform: uppercase;
     font-size: 2rem;
-
     color: rgba(68, 20, 20, 0.721);
     font-family: var(--font-long);
     font-weight: 600;
-
-
-
   }
+
+  
+
   .build_order_meal_description {
     font-family: var(--font-long);
     font-size: 1.5rem;
@@ -233,6 +232,7 @@ body {
     /* width: fit-content; */
 
   }
+ 
 
 
   .protein_contents div.food_new {
@@ -363,7 +363,7 @@ body {
     margin-top: 0;
     background: rgb(249, 249, 249);
     padding: 1rem 2rem 1rem 2rem;
-    display: flex;
+    /* display: flex; */
     justify-content: space-between;
     border-top: solid .12rem #d5d5d5;  
 }
@@ -413,6 +413,43 @@ body {
   /* .food_stuff {
     border: solid 1px black;
   } */
+  .protein_contents div.food_new {
+    margin-top: -3.4rem;
+    margin-left: 8rem;
+
+  }
+  
+  .checkmark {
+    margin-left: -8.0rem;
+    margin-right: 7.5rem;
+    margin-bottom: 1.8rem;
+    width:3rem;
+    height: 3rem;
+    color: black;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 90;   
+  } 
+
+  .food_title:first-child {
+    font-size:1.5rem;
+    margin-top: -6rem;
+    margin-left: 8rem;
+    margin-bottom: -.2rem;
+    padding-right: 0rem;
+  }
+
+
+  img.small {
+    max-height: 8rem;
+    width: 8rem;
+    height: 7rem;
+    /* cursor: pointer; */
+    margin-left: 0;
+    margin-bottom: 0;
+    margin-right: 2rem;
+    padding-left: 0;
+  }
   .build_order_meal_description {
     font-family: var(--font-long);
     font-size: 1.5rem;
@@ -433,9 +470,11 @@ body {
   .food_header {
     font-size: 2.0rem;
     letter-spacing: .06em;
-    margin-left: 1rem;
-    padding: 0rem;
+    font-weight: 100;
+    margin: auto;
+    padding: 1rem;
     text-transform: uppercase;
+    background-color: whitesmoke;
   }
 
 
@@ -473,6 +512,8 @@ body {
     /* cursor: pointer; */
    
   }
+  .topitoff_contents div.food_price {
+    display: none;  }
 
  
   .back_to_menu_arrow:hover {
@@ -488,7 +529,7 @@ body {
 
     display: flex;
     justify-content: center;
-    width: 100vw;
+    width: 100%;
     background-color: black;
     margin: 0rem;
     
@@ -511,6 +552,9 @@ body {
 
   }
 }
+.topitoff_contents div.food_price:last-child {
+  display: none;
+  }
 
 @media screen and (max-width: 650px) { 
   .build_order_meal_description {
@@ -553,7 +597,7 @@ body {
   justify-content: center;    
   letter-spacing: .065em;
   margin-left: 8.0rem;
-  margin-top: -3.47rem;
+  margin-top: -3.37rem;
   /* 
   margin-bottom: -4rem;*/
   /* padding:.3rem; */

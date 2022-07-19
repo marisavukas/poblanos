@@ -32,8 +32,7 @@ const OrderPage = (props) => {
       if (!exist) {
         mealItems.pop();
         setMealItems([...mealItems, {...foodMeal, qty: 1}]);
-        // const mealArrString= window.localStorage.getItem('bag-items', JSON.stringify(foodMeal));
-        // console.log(mealArrString);
+       
 
       }  else {
         onRemoveMeal(foodMeal);

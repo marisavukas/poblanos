@@ -61,7 +61,8 @@
 
 }
 .build_order_hr {
-  color:  #d5d5d5;
+  background-color:  #d5d5d5;
+  color:transparent;
   padding: 0 3rem;
   z-index: 80;
   display: flex;
@@ -101,9 +102,7 @@
     
   }
 
-  .protein_contents div.food_price {
-    display:none;
-  }
+ 
 
   .food_stuff:last-child {
     justify-content: flex-start;
@@ -138,30 +137,49 @@
 
 
 @media screen and (max-width: 1150px) {
+  hr {color:white;}
+
+  .food_contents_hr {
+ 
+      width: auto;
+      margin: 0;
+      background-color: #d5d5d5; height: 1px; border: 0;
+    } 
+
+  
+  
   .food_box {
-    border-top: solid 1px #d5d5d5;
+    border-top: solid 1px white;
+    border-bottom: solid 1px #d5d5d5;
     border-left: solid 1px #d5d5d5;
     border-right: solid 1px #d5d5d5;
 
-  }
+    }
+
+ 
 
   .food_box_clicked {
-    border-top: solid 1px black;
-    border-left: solid 1px black;
-    border-right: solid 1px black;
+    border-top: solid 1px white;
+    border-bottom: solid 1px #d5d5d5;
+    border-left: solid 1px #d5d5d5;
+    border-right: solid 1px #d5d5d5;
+
+    
 
   }
   .food_box:hover {
     cursor: pointer;
 
   }
+  
   .build_order_hr {
-    width: 100vw;
+    width: auto;
     margin: 0;
- 
-    background-color:#d5d5d5; ;
+    background-color: #d5d5d5; height: 1px; border: 0;
   }  
 
+  .food_calories {
+    margin-left: 8rem;}
 
   }
 
@@ -205,7 +223,7 @@ margin: 0 .7rem;
   }
 
   .checkmark {
-    margin-left: -9rem;
+    margin-left: -8rem;
     margin-right: 7.5rem;
     margin-bottom: 1rem;
     width:3rem;
