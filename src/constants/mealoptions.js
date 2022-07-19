@@ -12,8 +12,8 @@ const mealoptions = {
           price: 0,
           image: burrito,
           description: 'Your choice of freshly grilled meat or sofritas wrapped in a warm flour tortilla with rice, beans, or fajita veggies, and topped with guac, salsa, queso blanco, sour cream or cheese.',
+          
 
-    
         },
         {
           id: '2',
