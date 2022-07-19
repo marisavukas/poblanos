@@ -272,10 +272,24 @@ body {
     margin-left: 4.5rem;
 
   }
+  .quantity_contents div.food_price:last-child {
+    display: none;
+    margin-left: 4.5rem;
+
+  }
+
+  .quantity_contents div.food_name:first-child{
+    display: none;
+  }
+
 
   .bean_contents div.food_price:last-child {
     display: none;
  }
+
+ .tortilla_contents div.food_price:last-child {
+  display: none;
+}
 
 /* img_small:last-child {
   width:20px;

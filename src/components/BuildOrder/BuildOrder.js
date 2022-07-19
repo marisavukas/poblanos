@@ -14,8 +14,17 @@ import Food from "../Food/Food";
 import { mealoptions } from "../../constants";
 
 const BuildOrder = (props) => {
-  const { foods, proteins, addOns, rice, beans } = data;
-  const { burrito } = mealoptions;
+  const {
+    foods,
+    proteins,
+    addOns,
+    rice,
+    beans,
+    quantity,
+    tortilla,
+    side,
+    drink,
+  } = data;
 
   const { mealArrString } = props;
 
@@ -24,24 +33,28 @@ const BuildOrder = (props) => {
   const [proteinItems, setProteinItems] = useState([]);
   const [riceItems, setRiceItems] = useState([]);
   const [beansItems, setBeansItems] = useState([]);
+  const [tacoQuantityItems, setTacoQuantityItems] = useState([]);
+  const [tortillaItems, setTortillaItems] = useState([]);
+  const [sideItems, setSideItems] = useState([]);
+  const [drinkItems, setDrinkItems] = useState([]);
 
   const bagArr = [
     ...proteinItems,
     ...riceItems,
     ...beansItems,
     ...topItOffItems,
+    ...tortillaItems,
+    ...sideItems,
+    ...drinkItems,
   ];
 
   const mealArr = [mealArrString];
-
-  // const mealArrString= window.localStorage.getItem('bag-items', JSON.stringify(mealItems));
-  // const parsedmealArrString= JSON.parse(mealArrString);
-  // console.log(parsedmealArrString);
 
   const mealString = window.localStorage.getItem(
     "meal-selected",
     JSON.stringify(mealArr)
   );
+
   const parsedMealString = JSON.parse(mealString);
   console.log(parsedMealString);
 
@@ -49,23 +62,45 @@ const BuildOrder = (props) => {
     window.localStorage.setItem("build-order-items", JSON.stringify(bagArr));
   }, [bagArr]);
 
-  // useEffect(() => {
+  const onAddQuantity = (food) => {
+    const exist = tacoQuantityItems.find((x) => x.id === food.id);
+    if (!exist) {
+      tacoQuantityItems.pop();
+      setTacoQuantityItems([...tacoQuantityItems, { ...food, qty: 1 }]);
+    } else {
+      onRemoveQuantity(food);
+    }
+  };
 
-  //   window.localStorage.setItem('rice-selected', JSON.stringify(riceItems));
+  const onRemoveQuantity = (food) => {
+    // setCheck(false);
+    console.log("removed");
+    const exist = tacoQuantityItems.find((x) => x.id === food.id);
+    if (exist.qty === 1) {
+      setTacoQuantityItems(tacoQuantityItems.filter((x) => x.id !== food.id));
+    } else {
+    }
+  };
 
-  // },[riceItems]);
+  const onAddTortilla = (food) => {
+    const exist = tortillaItems.find((x) => x.id === food.id);
+    if (!exist) {
+      tortillaItems.pop();
+      setTortillaItems([...tortillaItems, { ...food, qty: 1 }]);
+    } else {
+      onRemoveTortilla(food);
+    }
+  };
 
-  // useEffect(() => {
-
-  //   window.localStorage.setItem('beans-selected', JSON.stringify(beansItems));
-
-  // },[beansItems]);
-
-  // useEffect(() => {
-
-  //   window.localStorage.setItem('addons-selected', JSON.stringify(cartItems));
-
-  // },[cartItems]);
+  const onRemoveTortilla = (food) => {
+    // setCheck(false);
+    console.log("removed");
+    const exist = tortillaItems.find((x) => x.id === food.id);
+    if (exist.qty === 1) {
+      setTortillaItems(tortillaItems.filter((x) => x.id !== food.id));
+    } else {
+    }
+  };
 
   const onAddTopItOff = (food) => {
     const exist = topItOffItems.find((x) => x.id === food.id);
@@ -148,6 +183,67 @@ const BuildOrder = (props) => {
     }
   };
 
+  const onAddSide = (food) => {
+    const exist = sideItems.find((x) => x.id === food.id);
+    if (!exist) {
+      setSideItems([...sideItems, { ...food, qty: 1 }]);
+    } else {
+      onRemoveSide(food);
+    }
+  };
+
+  const onRemoveSide = (food) => {
+    // setCheck(false);
+    console.log("removed");
+    const exist = sideItems.find((x) => x.id === food.id);
+    if (exist.qty === 1) {
+      setSideItems(sideItems.filter((x) => x.id !== food.id));
+    } else {
+    }
+  };
+
+  const onAddDrink = (food) => {
+    const exist = drinkItems.find((x) => x.id === food.id);
+    if (!exist) {
+      drinkItems.pop();
+      setDrinkItems([...drinkItems, { ...food, qty: 1 }]);
+    } else {
+      onRemoveDrink(food);
+    }
+  };
+
+  const onRemoveDrink = (food) => {
+    // setCheck(false);
+    console.log("removed");
+    const exist = drinkItems.find((x) => x.id === food.id);
+    if (exist.qty === 1) {
+      setDrinkItems(drinkItems.filter((x) => x.id !== food.id));
+    } else {
+    }
+  };
+
+  const handleAddToCart = () => {
+    const mealSelected = JSON.parse(
+      window.localStorage.getItem("meal-selected")
+    );
+    const buildOrderItems = JSON.parse(
+      window.localStorage.getItem("build-order-items")
+    );
+
+    const combinedItem = {
+      ...mealSelected[0],
+      ingredients: buildOrderItems,
+    };
+
+    let existingCart = JSON.parse(window.localStorage.getItem("cart"));
+    // reset cart if invalid data is in storage:
+    if (!Array.isArray(existingCart)) {
+      existingCart = [];
+    }
+    existingCart.push(combinedItem);
+    localStorage.setItem("cart", JSON.stringify(existingCart));
+  };
+
   return (
     <div className="order_page">
       {parsedMealString.map((item) => (
@@ -172,13 +268,35 @@ const BuildOrder = (props) => {
       <div className="back_to_menu_container">
         <div className="back_to_menu">
         <Link to = "/mealoptions">Return to Menu</Link>
-
-
         </div>
       </div>
       </div> */}
-          <h2 className="food_header">Protein or Veggie</h2>
 
+          {parsedMealString.map(
+            (item) =>
+              item.id === "3" && (
+                <>
+                  <h2 className="food_header">Choose Quantity</h2>
+                  <div className="quantity_contents">
+                    <Main
+                      foods={quantity}
+                      onAdd={onAddQuantity}
+                      cartItems={tacoQuantityItems}
+                    ></Main>
+                  </div>
+
+                  <h2 className="food_header">Tortilla</h2>
+                  <div className="tortilla_contents">
+                    <Main
+                      foods={tortilla}
+                      onAdd={onAddTortilla}
+                      cartItems={tortillaItems}
+                    ></Main>
+                  </div>
+                </>
+              )
+          )}
+          <h2 className="food_header">Protein or Veggie</h2>
           <h3 className="food_description">Choose one of the following.</h3>
           <div className="protein_contents">
             <Main
@@ -187,13 +305,11 @@ const BuildOrder = (props) => {
               cartItems={proteinItems}
             ></Main>
           </div>
-
           <h2 className="food_header">Rice</h2>
           <h3 className="food_description">Choose one of the following.</h3>
           <div className="rice_contents">
             <Main foods={rice} onAdd={onAddRice} cartItems={riceItems}></Main>
           </div>
-
           <h2 className="food_header">Beans</h2>
           <h3 className="food_description">Choose one of the following.</h3>
           <div className="bean_contents">
@@ -203,7 +319,6 @@ const BuildOrder = (props) => {
               cartItems={beansItems}
             ></Main>
           </div>
-
           <h2 className="food_header">Top it off</h2>
           <div className="topitoff_contents">
             <Main
@@ -212,55 +327,28 @@ const BuildOrder = (props) => {
               cartItems={topItOffItems}
             ></Main>
           </div>
+
+          <h2 className="food_header">Sides</h2>
+          <div className="side_contents">
+            <Main foods={side} onAdd={onAddSide} cartItems={sideItems}></Main>
+          </div>
+
+          <h2 className="food_header">Drinks</h2>
+          <div className="drink_contents">
+            <Main
+              foods={drink}
+              onAdd={onAddDrink}
+              cartItems={drinkItems}
+            ></Main>
+          </div>
         </div>
-      </div>
-      <div className="basket_section">
-        {/* {bagArr.map((item) => (
-          <div key={item.id} className="row">
-          <div className="row-2">{item.name}</div>
-
-          </div>))} */}
-
-        {/* 
-      <br></br>
-        {proteinItems.length === 0 && <div>No protein selected</div>}
-        {proteinItems.map((item) => (
-          <div key={item.id} className="row">
-          <div className="row-2">{item.name}</div>
-
-          </div>))}
-        <br></br>
-
-        {riceItems.length === 0 && <div>No rice selected</div>}
-        {riceItems.map((item) => (
-          <div key={item.id} className="row">
-          <div className="row-2">{item.name}</div>
-
-          </div>))}
-        <br></br>
-
-        {beansItems.length === 0 && <div>No beans selected</div>}
-        {beansItems.map((item) => (
-          <div key={item.id} className="row">
-          <div className="row-2">{item.name}</div>
-
-          </div>))}
-        <br></br>
-
-        {topItOffItems.length === 0 && <div>No add ons selected</div>}
-        {topItOffItems.map((item) => (
-          <div key={item.id} className="row">
-          <div className="row-2">{item.name}</div>
-
-          </div>))}
-        <br></br> */}
       </div>
 
       <div className="add_to_cart_footer">
         <div className="cart_stuff">
           <h4 className="your_meal_text">Your meal:</h4>
         </div>
-        <Link to="/checkout">
+        <Link to="/checkout" onClick={handleAddToCart}>
           <button className="order_button">Add To Bag</button>
         </Link>
       </div>
