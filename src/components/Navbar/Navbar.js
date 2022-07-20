@@ -11,6 +11,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = React.useState(false);
+
   return (
     <nav className="app__navbar">
       <div className="navbar_container">

@@ -50,38 +50,8 @@ const Checkout = (props) => {
           </div>
         ))}
       </div>
-
-      {/* <div className="row-2">
-          <button className="remove">
-            -
-          </button>{' '}
-          <button className="add">
-            +
-          </button>
-      </div> */}
-      {/* <div className="checkout_items">{checkout_items}</div> */}
-
-      {/* <div className="checkout_beans">{checkout_beans}</div>
-      <div className="checkout_rice">{checkout_rice}</div>
-      <div className="checkout_addOnItems">{checkout_addOnItems}</div>
-      {checkout_protein.length === 0 && <div>Cart is empty</div>} */}
     </div>
   );
 };
 
 export default Checkout;
-
-// let newData= JSON.parse(localStorage.getItem('new-items'));
-// // console.log([...oldData]);
-
-// useEffect(() => {
-//   let oldData= JSON.parse(localStorage.getItem('items'));
-
-//   if (oldData) {
-
-//     setBagItems([...oldData]);
-
-//   }
-// }, []);
-
-// localStorage.setItem('saved-cart-items', JSON.stringify([...newData,...bagItems]));
