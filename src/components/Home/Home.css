@@ -182,23 +182,11 @@ video, .app__video-overlay  {
 
  }
 
-/* @media screen and (min-width: 1150px) { 
-    .order_now_button {
 
-        margin-top: 1vh;
-    
-    }
-    .new_section_and_order_button {
-        justify-content: center;
-    }
-
-} */
    
 
 @media screen and (max-width: 650px) {
-    /* .new_section_and_order_button {
-        margin-top:-3rem;
-    } */
+   
     .new_steak_description {
         font-size: 1.2rem;
     }

@@ -24,7 +24,7 @@ const mealoptions = {
     {
       id: "3",
       name: "Tacos",
-      price: "0",
+      price: 0,
       image: tacos,
       description:
         "Your choice of freshly grilled meat or sofritas served in a soft or hard-shell tortilla with guac, salsa, queso blanco, sour cream or cheese, and topped with hand-cut romaine lettuce",
@@ -32,7 +32,7 @@ const mealoptions = {
     {
       id: "4",
       name: "Chips & Sides",
-      price: "",
+      price: 0,
       image: chipsandsides,
       description: "Everything else you need to round out your meal.",
     },

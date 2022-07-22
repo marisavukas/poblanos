@@ -1,17 +1,48 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Navbar.css";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdOutlineRestaurantMenu } from "react-icons/md";
 import { MdOutlineShoppingBag } from "react-icons/md";
 import BuildOrder from "../BuildOrder/BuildOrder";
+import OrderPage from "../OrderPage/OrderPage";
 
 import images from "../../constants/images";
 
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = (props) => {
   const [toggleMenu, setToggleMenu] = React.useState(false);
+  const { mealItems, setMealItems } = props;
 
+  const handleAddToCart = () => {
+    const mealSelected = JSON.parse(
+      window.localStorage.getItem("meal-selected")
+    );
+    if (mealSelected === null) {
+      mealSelected = [];
+      window.localStorage.setItem("meal-selected", mealSelected);
+    }
+    const buildOrderItems = JSON.parse(
+      window.localStorage.getItem("build-order-items")
+    );
+
+    if (!Array.isArray(buildOrderItems)) {
+      buildOrderItems = [];
+    }
+
+    const combinedItem = {
+      ...mealSelected[0],
+      ingredients: buildOrderItems,
+    };
+
+    let existingCart = JSON.parse(window.localStorage.getItem("cart"));
+    // reset cart if invalid data is in storage:
+    if (!Array.isArray(existingCart)) {
+      existingCart = [];
+    }
+    existingCart.push(combinedItem);
+    localStorage.setItem("cart", JSON.stringify(existingCart));
+  };
   return (
     <nav className="app__navbar">
       <div className="navbar_container">
@@ -31,11 +62,11 @@ const Navbar = () => {
           <li className="p__opensans">
             <Link to="/ourvalues">About</Link>
           </li>
-          <li className="p__opensans">
+          {/* <li className="p__opensans">
             <Link to="/contact">Contact</Link>
-          </li>
+          </li> */}
         </ul>
-        <Link to="/checkout">
+        <Link to="/checkout" onClick={handleAddToCart}>
           <>
             <MdOutlineShoppingBag className="checkout_bag" />
           </>
@@ -86,14 +117,17 @@ const Navbar = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/contact" onClick={() => setToggleMenu(false)}>
+                {/* <Link to="/contact" onClick={() => setToggleMenu(false)}>
                   Contact
-                </Link>
+                </Link> */}
               </li>
               <li>
                 <Link to="/checkout" onClick={() => setToggleMenu(false)}>
                   Checkout
-                  <MdOutlineShoppingBag className="checkout_bag_overlay" />
+                  <MdOutlineShoppingBag
+                    className="checkout_bag_overlay"
+                    onClick={handleAddToCart}
+                  />
                 </Link>
               </li>
             </ul>

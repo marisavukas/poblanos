@@ -63,8 +63,10 @@ export default function Food(props) {
   };
 
   return (
-    <div className="grid">
-      <SelectedBox onClick={() => onAdd(food)} isinCart={!inCart} />
-    </div>
+    <>
+      <div className="grid">
+        <SelectedBox onClick={() => onAdd(food)} isinCart={!inCart} />
+      </div>
+    </>
   );
 }

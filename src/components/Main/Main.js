@@ -3,9 +3,10 @@ import Food from "../Food/Food";
 import { BrowserRouter, Route, Link } from "react-router-dom";
 
 import "./Main.css";
+import Basket from "../Basket/Basket";
 
 export default function Main(props) {
-  const { foods, onAdd, cartItems } = props;
+  const { foods, onAdd, cartItems, bagArr } = props;
 
   return (
     <main>
