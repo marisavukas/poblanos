@@ -330,7 +330,7 @@ const BuildOrder = (props) => {
           )}
 
           <h2 className="food_header">Protein or Veggie</h2>
-          <Link to="/OrderPage">
+          <Link to="/OrderPage" className="back_to_menu_button_container">
             <button className="back_to_menu_underline_button">
               Back To Menu
             </button>
