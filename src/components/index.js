@@ -7,7 +7,7 @@ import Checkout from "./Checkout/Checkout";
 import OrderPage from "./OrderPage/OrderPage";
 import MealMain from "./MealMain/MealMain";
 import MealFood from "./MealFood/MealFood";
-import endofdemo from "././endofdemo";
+import EndOfDemo from "./EndOfDemo/EndOfDemo";
 
 export {
   Home,
@@ -19,5 +19,5 @@ export {
   OrderPage,
   MealMain,
   MealFood,
-  endofdemo,
+  EndOfDemo,
 };

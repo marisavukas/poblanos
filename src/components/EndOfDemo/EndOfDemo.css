@@ -1,0 +1,24 @@
+.end_demo_page {
+    height: 100vh;
+    background-color: black;
+}
+
+.end_demo{
+    font-family: var(--font-long);
+    color:white;
+    background-color: black;
+    display:flex;
+    justify-content: center;
+    padding-top: 15%;
+    padding-bottom: 3rem;
+    font-size: 2rem;
+}
+
+.left_arrow {
+    margin-right: 5px;
+
+}
+.transparent_left_arrow {
+    margin-left: 0px;
+    color: transparent;
+}

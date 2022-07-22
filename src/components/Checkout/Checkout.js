@@ -18,9 +18,11 @@ const Checkout = (props) => {
 
   const parsedMealString = JSON.parse(mealString);
 
-  const totalAmountString = window.localStorage.getItem("cart-total");
-  const totalAmountNumber = parseFloat(totalAmountString).toFixed(2);
-
+  const subtotalAmountString = window.localStorage.getItem("cart-total");
+  const subtotalAmountNumber = parseFloat(subtotalAmountString).toFixed(2);
+  const taxPriceNumber = subtotalAmountNumber * 0.08;
+  const totalPriceNumber =
+    parseFloat(taxPriceNumber) + parseFloat(subtotalAmountNumber);
   const cart = JSON.parse(window.localStorage.getItem("cart"));
 
   let buildOrderItemsArr = JSON.parse(
@@ -30,17 +32,10 @@ const Checkout = (props) => {
     buildOrderItemsArr = [];
   }
 
-  console.log(totalAmountString);
-
   return (
     <div className="checkout_page">
       <div className="checkout_header_and_button">
-        <h1 className="checkout_header">Checkout</h1>{" "}
-        <Link to="/endofdemo">
-          <button className="checkout_button">
-            Checkout/End Demo <BsArrowRight />
-          </button>
-        </Link>
+        <h1 className="checkout_header">Checkout</h1>
       </div>
       <hr className="build_order_hr"></hr>
       {cart && (
@@ -73,15 +68,32 @@ const Checkout = (props) => {
                 </div>
               </div>
             ))}
+            <hr className="build_order_hr"></hr>
+
+            <div className="subtotal_contents">
+              <div className="subtotal_header">Subtotal</div>
+              <div className="subtotal_amount">${subtotalAmountNumber}</div>
+            </div>
+
+            <div className="tax_contents">
+              <div className="tax_header">Tax</div>
+              <div className="tax_amount">${taxPriceNumber}</div>
+            </div>
+
             <div className="total_contents">
               <div className="total_header">Total</div>
-              <div className="total_amount">${totalAmountNumber}</div>
+              <div className="total_amount">${totalPriceNumber}</div>
             </div>
           </div>
 
           <Link to="/orderpage">
             <button className="add_another_item_button">
               Add Another Menu Item
+            </button>
+          </Link>
+          <Link to="/EndOfDemo">
+            <button className="checkout_button">
+              Checkout/End Demo <BsArrowRight />
             </button>
           </Link>
         </>

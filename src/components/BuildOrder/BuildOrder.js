@@ -328,7 +328,13 @@ const BuildOrder = (props) => {
                 </>
               )
           )}
+
           <h2 className="food_header">Protein or Veggie</h2>
+          <Link to="/OrderPage">
+            <button className="back_to_menu_underline_button">
+              Back To Menu
+            </button>
+          </Link>
           <h3 className="food_description">Choose one of the following.</h3>
           <div className="protein_contents">
             <Main

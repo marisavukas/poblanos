@@ -9,7 +9,7 @@ import {
   Contact,
   Checkout,
   OrderPage,
-  endofdemo,
+  EndOfDemo,
 } from "./components";
 import { Footer } from "./container";
 
@@ -33,7 +33,7 @@ function App() {
 
           <Route path="/buildorder" element={<BuildOrder />} />
 
-          <Route path="/endofdemo" element={<endofdemo />} />
+          <Route path="/endofdemo" element={<EndOfDemo />} />
         </Routes>
       </BrowserRouter>
       <Footer />

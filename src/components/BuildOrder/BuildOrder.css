@@ -291,61 +291,6 @@ body {
   display: none;
 }
 
-/* img_small:last-child {
-  width:20px;
- } */
-
-  /* 
-  .back_to_menu {
-    display: flex;
-    justify-content: flex-start;
-    letter-spacing: .05em;
-    margin-bottom: .5rem;
-    margin-right: 1rem;
-    padding: 1rem;
-    font-size: 1.7rem;
-    color: #bf0008;
-  }
-
-  .back_to_menu:hover{
-    color: #bf0008;
-  }
-
-  .back_to_menu::after {
-    content: "";
-    height: 3px;
-    width: 0%;
-    left: 0;
-    bottom: -10px;
-    transition: .3s ease-in-out;
-    display: block;
-
-  }
-
-  .back_to_menu:hover::after {
-    content:'';
-    height: 3px;
-    width: 40%;
-    background-color:#bf0008;
-      display: block;
-  }
-
-
-
-
-  .back_to_menu_container {
-    display: flex;
-    justify-content: flex-start;
-    font-family: var(--font-alt);
-    margin-right: 3rem;
-    margin-left: 60%;
-    margin-bottom: -6.2rem;
-    width: auto;
-    font-size: 1.5rem;
-    margin-top: -2rem;
-
-  } */
-
 
 
 
@@ -386,6 +331,34 @@ body {
   margin-right: 0;
 }
 
+.back_to_menu_button_container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+.back_to_menu_underline_button  {
+  color: rgb(68, 20, 20);
+  cursor: pointer;
+  display: block;
+  background-color: white;
+  justify-content: flex-end;
+  z-index:2;
+  text-transform: uppercase;
+  width: auto;
+  font-size: 1.5rem;
+  color: rgb(68, 20, 20);
+  border-style: none;
+  border-bottom: 2px solid rgb(68, 20, 20);
+  margin-right:5%;
+  margin-left: auto;
+  padding: 0;
+  font-family: var(--font-alt);
+  letter-spacing: .12em;
+  text-align: right;
+}
+
 
 
 
@@ -423,10 +396,16 @@ body {
 
 }
 
+
+
+
 @media screen and (max-width:1150px) {
   /* .food_stuff {
     border: solid 1px black;
   } */
+  .back_to_menu_underline_button  {
+    display: none;
+    }
   .protein_contents div.food_new {
     margin-top: -3.4rem;
     margin-left: 8rem;
@@ -599,6 +578,7 @@ body {
   font-family: var(--font-alt);
   letter-spacing: .06em;
 }
+
 
 .protein_contents div.food_new {
   font-size: 1rem;
