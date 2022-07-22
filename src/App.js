@@ -1,12 +1,10 @@
 import React from "react";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { MdOutlineRestaurantMenu } from "react-icons/md";
+
 import {
   Navbar,
   BuildOrder,
   Home,
   OurValues,
-  Contact,
   Checkout,
   OrderPage,
   EndOfDemo,
@@ -28,7 +26,6 @@ function App() {
 
           <Route path="/ourvalues" element={<OurValues />} />
 
-          <Route path="/contact" element={<Contact />} />
           <Route path="/checkout" element={<Checkout />} />
 
           <Route path="/buildorder" element={<BuildOrder />} />

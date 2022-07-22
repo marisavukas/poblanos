@@ -2,9 +2,6 @@ import React, { useEffect, useState } from "react";
 import { MdCheckCircle, MdCheckCircleOutline } from "react-icons/md";
 import "./Food.css";
 
-import { data, mealoptions } from "../../constants";
-import Basket from "../Basket/Basket";
-
 export default function Food(props) {
   const { food, onAdd, cartItems, mealArrString } = props;
   const mealArr = [mealArrString];
@@ -17,12 +14,6 @@ export default function Food(props) {
   const parsedMealString = JSON.parse(mealString);
 
   const inCart = !!cartItems.find((x) => x.id === food.id);
-
-  //   useEffect(() => {
-
-  //     window.localStorage.setItem('meal-selected', JSON.stringify(cartItems));
-
-  //  },[cartItems]);
 
   const SelectedBox = ({ onClick, isinCart }) => {
     const text = isinCart ? (

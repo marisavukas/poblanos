@@ -120,11 +120,6 @@ const BuildOrder = (props) => {
     if (exist.qty === 1) {
       setTopItOffItems(topItOffItems.filter((x) => x.id !== food.id));
     } else {
-      // setTopItOffItems(
-      //   topItOffItems.map((x) =>
-      //     x.id === food.id ? { ...exist, qty: exist.qty - 1 } : x
-      //   )
-      // );
     }
   };
 
@@ -293,17 +288,8 @@ const BuildOrder = (props) => {
       ))}
       <hr className="build_order_hr"></hr>
 
-      {/* <div x={cartItems.length}></div> */}
       <div className="choose_build_order_items">
         <div className="grid">
-          {/* <div className='food_header_and_menu_container'> 
-      <div className="back_to_menu_container">
-        <div className="back_to_menu">
-        <Link to = "/mealoptions">Return to Menu</Link>
-        </div>
-      </div>
-      </div> */}
-
           {parsedMealString.map(
             (item) =>
               item.id === "3" && (
@@ -329,62 +315,111 @@ const BuildOrder = (props) => {
               )
           )}
 
-          <h2 className="food_header">Protein or Veggie</h2>
-          <Link to="/OrderPage" className="back_to_menu_button_container">
-            <button className="back_to_menu_underline_button">
-              Back To Menu
-            </button>
-          </Link>
-          <h3 className="food_description">Choose one of the following.</h3>
-          <div className="protein_contents">
-            <Main
-              foods={proteins}
-              onAdd={onAddProtein}
-              cartItems={proteinItems}
-            ></Main>
-          </div>
-          <h2 className="food_header">Rice</h2>
-          <h3 className="food_description">Choose one of the following.</h3>
-          <div className="rice_contents">
-            <Main foods={rice} onAdd={onAddRice} cartItems={riceItems}></Main>
-          </div>
-          <h2 className="food_header">Beans</h2>
-          <h3 className="food_description">Choose one of the following.</h3>
-          <div className="bean_contents">
-            <Main
-              foods={beans}
-              onAdd={onAddBeans}
-              cartItems={beansItems}
-            ></Main>
-          </div>
-          <h2 className="food_header">Top it off</h2>
-          <div className="topitoff_contents">
-            <Main
-              foods={addOns}
-              onAdd={onAddTopItOff}
-              cartItems={topItOffItems}
-            ></Main>
-          </div>
+          {parsedMealString.map(
+            (item) =>
+              item.id === "4" && (
+                <>
+                  <Link
+                    to="/OrderPage"
+                    className="back_to_menu_button_container"
+                  >
+                    <button className="back_to_menu_underline_button">
+                      Back To Menu
+                    </button>
+                  </Link>
 
-          <h2 className="food_header">Sides</h2>
-          <div className="side_contents">
-            <Main foods={side} onAdd={onAddSide} cartItems={sideItems}></Main>
-          </div>
-          {/* <Basket
-            cartItems={bagArr}
-            onAdd={onAddSide}
-            onRemove={onRemoveSide}
-          ></Basket> */}
+                  <h2 className="food_header">Sides</h2>
+                  <div className="side_contents">
+                    <Main
+                      foods={side}
+                      onAdd={onAddSide}
+                      cartItems={sideItems}
+                    ></Main>
+                  </div>
+                  <h2 className="food_header">Drinks</h2>
+                  <div className="drink_contents">
+                    <Main
+                      foods={drink}
+                      onAdd={onAddDrink}
+                      cartItems={drinkItems}
+                    ></Main>
+                  </div>
+                </>
+              )
+          )}
 
-          <h2 className="food_header">Drinks</h2>
-          <div className="drink_contents">
-            <Main
-              foods={drink}
-              onAdd={onAddDrink}
-              cartItems={drinkItems}
-            ></Main>
-          </div>
-          {/* <Basket cartItems={bagArr} onAdd={onAddDrink}></Basket> */}
+          {parsedMealString.map(
+            (item) =>
+              item.id != "4" && (
+                <>
+                  <h2 className="food_header">Protein or Veggie</h2>
+                  <Link
+                    to="/OrderPage"
+                    className="back_to_menu_button_container"
+                  >
+                    <button className="back_to_menu_underline_button">
+                      Back To Menu
+                    </button>
+                  </Link>
+                  <h3 className="food_description">
+                    Choose one of the following.
+                  </h3>
+                  <div className="protein_contents">
+                    <Main
+                      foods={proteins}
+                      onAdd={onAddProtein}
+                      cartItems={proteinItems}
+                    ></Main>
+                  </div>
+                  <h2 className="food_header">Rice</h2>
+                  <h3 className="food_description">
+                    Choose one of the following.
+                  </h3>
+                  <div className="rice_contents">
+                    <Main
+                      foods={rice}
+                      onAdd={onAddRice}
+                      cartItems={riceItems}
+                    ></Main>
+                  </div>
+                  <h2 className="food_header">Beans</h2>
+                  <h3 className="food_description">
+                    Choose one of the following.
+                  </h3>
+                  <div className="bean_contents">
+                    <Main
+                      foods={beans}
+                      onAdd={onAddBeans}
+                      cartItems={beansItems}
+                    ></Main>
+                  </div>
+                  <h2 className="food_header">Top it off</h2>
+                  <div className="topitoff_contents">
+                    <Main
+                      foods={addOns}
+                      onAdd={onAddTopItOff}
+                      cartItems={topItOffItems}
+                    ></Main>
+                  </div>
+                  <h2 className="food_header">Sides</h2>
+                  <div className="side_contents">
+                    <Main
+                      foods={side}
+                      onAdd={onAddSide}
+                      cartItems={sideItems}
+                    ></Main>
+                  </div>
+                  <h2 className="food_header">Drinks</h2>
+                  <div className="drink_contents">
+                    <Main
+                      foods={drink}
+                      onAdd={onAddDrink}
+                      cartItems={drinkItems}
+                    ></Main>
+                  </div>
+                </>
+              )
+          )}
         </div>
       </div>
 

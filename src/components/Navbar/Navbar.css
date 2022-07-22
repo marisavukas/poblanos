@@ -1,5 +1,5 @@
 .app__navbar {
-    width: 100%;
+    width: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -272,6 +272,8 @@ hr {
     display: block;
   }
 
+  
+
 /*
   .back_to_menu_container {
     display: flex;
@@ -299,12 +301,16 @@ hr {
 
     .back_to_menu{
         font-size:1.5rem;
-        width: fit-content;
+        width: auto;
         display: flex;
+        margin:0;
         justify-content: center;
 
         flex-wrap: nowrap;
     }
+
+
+
 
     .back_to_menu:hover{
         font-size:1.5rem;

@@ -261,7 +261,8 @@
     text-align: center;
     
 }
-.remove_checkout_button, .edit_checkout_button, .duplicate_checkout_button {
+
+/* .remove_checkout_button, .edit_checkout_button, .duplicate_checkout_button {
     color: rgb(68, 20, 20);
     background-color: whitesmoke;
     cursor: pointer;
@@ -283,7 +284,7 @@
     text-align: center;
     
 
-}
+} */
 .remove_edit_duplicate_buttons {
     display: flex;
     flex-direction: row;
@@ -324,8 +325,41 @@
         padding: 0;
         width: 90%;
         }}
+        .checkout_header{
+            font-size: 3rem;
+            margin:auto;
+        }
 
 @media screen and (max-width: 650px) { 
+     .tax_contents {
+        margin: 0rem 3rem 1.5rem 3rem;
+    }
+    .subtotal_contents {
+        margin: 1.5rem 3rem 0rem 3rem;
+    }
+
+
+    .total_contents {
+        margin: 0.9rem 3rem ;
+
+    }
+    .item_name {
+        padding-right: 3rem;
+    }
+    .checkout_header{
+        font-size: 2.5rem;
+        margin:auto;
+    }
+
+    .meal_title {
+        font-size:1.5rem;
+
+    }
+
+    
+    .item_price {
+        padding-left: .5rem;
+    }
 
 .start_my_order_button {
 
@@ -339,12 +373,22 @@
 
 }
 
-.checkout_button {
 
-}
 .checkout_page_section {
     padding: 0;
+    font-size: 2rem;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: flex-start;
+    font-weight: 300;     
+    font-family: var(--font-long);
+    width:auto;
+    margin: 0;
+    flex-wrap: wrap;
 }
+
+
+
 
 .checkout_contents_container {
     padding: 0;
@@ -353,5 +397,29 @@
 }
 
 
+
+}
+
+@media screen and (max-width: 300px) { 
+    .item_name {
+        padding-right: .5rem;
+        font-size: 1rem;
+    }
+    .item_price, .subtotal_amount, .tax_amount {
+        font-size: 1rem;
+        padding: 0;
+    }
+   
+    
+
+    .add_another_item_button {
+        font-size: 1.2rem;
+        padding: 1.5rem 1rem;
+    }
+
+    .checkout_button {
+        font-size: 1.2rem;
+        padding: 1.5rem 2rem;
+    }
 
 }
