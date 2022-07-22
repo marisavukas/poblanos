@@ -335,7 +335,9 @@ hr {
     .app__navbar-logo img {
         color: transparent;   
         width: 110px;
+        display: none;
         
        
     }
+
 }

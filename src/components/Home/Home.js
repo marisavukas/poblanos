@@ -25,22 +25,7 @@ const Home = () => {
             muted
           />
           <div className="app__video-overlay flex-center">
-            <div
-
-            // onClick={() => {
-            //   setPlayVideo(!playVideo);
-            //   if (!playVideo) {
-
-            //     vidRef.current.play();
-            //   }
-            // }}
-            >
-              {/* {playVideo ? (
-              <BsPauseFill color="#fff" fontSize={30} />
-            ) : (
-              <BsFillPlayFill color="#fff" fontSize={30} />
-            )} */}
-            </div>
+            <div></div>
             <div className="new_section_and_order_button">
               <div className="new_stamp">NEW</div>
               <div className="new_steak">Garlic Guajillo Steak</div>

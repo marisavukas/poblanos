@@ -97,6 +97,7 @@ const Checkout = (props) => {
               Add Another Menu Item
             </button>
           </Link>
+
           <Link to="/EndOfDemo">
             <button className="checkout_button">
               Checkout/End Demo <BsArrowRight />
