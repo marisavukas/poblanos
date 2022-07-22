@@ -334,10 +334,18 @@ hr {
 
     .app__navbar-logo img {
         color: transparent;   
-        width: 110px;
-        display: none;
+        width: 100px;
         
        
     }
 
+}
+
+@media screen and (max-width: 300px) { 
+    .app__navbar-logo img {
+       
+        display: none;
+        
+       
+    }
 }
