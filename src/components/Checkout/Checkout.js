@@ -72,17 +72,23 @@ const Checkout = (props) => {
 
             <div className="subtotal_contents">
               <div className="subtotal_header">Subtotal</div>
-              <div className="subtotal_amount">${subtotalAmountNumber}</div>
+              <div className="subtotal_amount">
+                ${parseFloat(subtotalAmountNumber).toFixed(2)}
+              </div>
             </div>
 
             <div className="tax_contents">
               <div className="tax_header">Tax</div>
-              <div className="tax_amount">${taxPriceNumber}</div>
+              <div className="tax_amount">
+                ${parseFloat(taxPriceNumber).toFixed(2)}
+              </div>
             </div>
 
             <div className="total_contents">
               <div className="total_header">Total</div>
-              <div className="total_amount">${totalPriceNumber}</div>
+              <div className="total_amount">
+                ${parseFloat(totalPriceNumber).toFixed(2)}
+              </div>
             </div>
           </div>
 
