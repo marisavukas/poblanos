@@ -1,5 +1,5 @@
 import React from "react";
-
+import Layout from "./Layout";
 import {
   Navbar,
   BuildOrder,
@@ -18,22 +18,22 @@ function App() {
   return (
     <div className="app">
       <BrowserRouter>
-        <Navbar />
         <Routes>
-          <Route exact path="/" element={<Home />} />
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
 
-          <Route path="/orderpage" element={<OrderPage />} />
+            <Route path="/orderpage" element={<OrderPage />} />
 
-          <Route path="/ourvalues" element={<OurValues />} />
+            <Route path="/ourvalues" element={<OurValues />} />
 
-          <Route path="/checkout" element={<Checkout />} />
+            <Route path="/checkout" element={<Checkout />} />
 
-          <Route path="/buildorder" element={<BuildOrder />} />
+            <Route path="/buildorder" element={<BuildOrder />} />
 
-          <Route path="/endofdemo" element={<EndOfDemo />} />
+            <Route path="/endofdemo" element={<EndOfDemo />} />
+          </Route>
         </Routes>
       </BrowserRouter>
-      <Footer />
     </div>
   );
 }

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Food from "../Food/Food";
-import { BrowserRouter, Route, Link } from "react-router-dom";
 
 import "./Main.css";
 import Basket from "../Basket/Basket";
