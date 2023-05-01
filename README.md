@@ -14,8 +14,8 @@ To install and run the app locally, follow these steps:
 5. Open a web browser and navigate to http://localhost:3000.
 
 
-##Tech Used:
+## Tech Used:
 
-• React.js
-• React Router
+- React.js
+- React Router
 
