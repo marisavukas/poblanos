@@ -5,6 +5,7 @@ import "./MealFood.css";
 import { data, mealoptions } from "../../constants";
 import { Link } from "react-router-dom";
 import { BsArrowRight } from "react-icons/bs";
+import { CaloriesPrice } from "../../sharedStyleds";
 
 export default function MealFood(props) {
   const { foodMeal, onAddMeal, mealItems } = props;
@@ -30,7 +31,6 @@ export default function MealFood(props) {
         <h3 className="orderpage_food_title">{foodMeal.name}</h3>
         <div className="calories_and_price">
           <div className="food_calories">{foodMeal.calories}</div>
-          {/* <div className="food_price">${foodMeal.price}</div>  */}
         </div>
         <div className="food_new">{foodMeal.new}</div>
       </div>
@@ -51,10 +51,10 @@ export default function MealFood(props) {
         </div>
 
         <h3 className="orderpage_food_title">{foodMeal.name}</h3>
-        <div className="calories_and_price">
+        <CaloriesPrice>
           <div className="food_calories">{foodMeal.calories}</div>
           {/* <div className="food_price">${foodMeal.price}</div>  */}
-        </div>
+        </CaloriesPrice>
         <div className="food_new">{foodMeal.new}</div>
       </div>
     );

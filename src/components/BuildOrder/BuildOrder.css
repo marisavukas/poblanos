@@ -210,27 +210,18 @@ body {
     margin-left: .7rem;
     margin-right: 6rem;
     text-align: center;
-
   }
+  
   .your_meal_text {
-    display: none;
-    
-  }
-  .calories_and_price{
-    display: flex;
-    flex-direction: row;
-    margin-top: 1.6rem;
+    display: none; 
   }
 
   .protein_contents div.food_price {
     display: flex;
     margin-left: 4.5rem;
-    /* margin-top:-1.76rem; */
     font-family: var(--font-text);
     color: rgba(68, 20, 20, 0.721);
     font-size: 1.25rem;
-    /* width: fit-content; */
-
   }
  
 
