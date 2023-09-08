@@ -2,8 +2,6 @@ import React from "react";
 import { FiFacebook, FiTwitter, FiInstagram } from "react-icons/fi";
 import styled from "styled-components";
 
-import "./Footer.css";
-
 const FooterContainer = styled.div`
   position: relative;
   z-index: 1;
@@ -50,7 +48,6 @@ const Footer = () => (
     <FooterCopyright>
       2022 Poblano's Grill. All Rights reserved.
     </FooterCopyright>
-    {/* </div> */}
   </FooterContainer>
 );
 
