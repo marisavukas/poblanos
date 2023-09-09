@@ -2,24 +2,6 @@
   width: auto;
 }
 
-.meal_name {
-  /* font-size: 4rem; */
-}
-
-.orderpage_food_title {
-font-size: 2.5rem;
-display: flex;
-justify-content: center;
-}
-  
-  
-  
-  .meal_contents {
-    /* z-index:1000; */
-    
-
-
-  }
 
 .meal_options_display {
   row-gap: 30px;
@@ -32,7 +14,7 @@ justify-content: center;
   
 }
 
-.order_arrow{
+.order_arrow {
   margin-bottom: -.2rem;
   display: none;
 
@@ -69,13 +51,6 @@ justify-content: center;
   
 }
 
-
-
-
-
-
-
-
 .meal_choices {
   z-index:11;
   display: flex;
@@ -99,7 +74,6 @@ justify-content: center;
   text-align: center;
   text-transform: none;
 }
-  
   .meal_name {
     z-index:1;
     font-family: var(--font-text);
@@ -118,7 +92,6 @@ justify-content: center;
   .build_order_button {
       cursor: pointer;
       display: flex;
-
       justify-content: center;
       z-index:2;
       text-transform: uppercase;
@@ -131,46 +104,13 @@ justify-content: center;
       font-family: var(--font-alt);
       letter-spacing: .12em;
       text-align: center;
-  
-    
-
   }
+
+
   .build_order_button:hover {
-  
     background-color: rgba(68, 20, 20, 0.796);
-
     color: white;
-   
-
-  
-
-}
-
-.orderpage_image {
-
-  max-height: 10rem;
-  width: 15rem;
-  height: 10rem;
-  display: flex;
-  padding:1rem;
-  justify-content: center;
-  /* cursor: pointer; */
-  margin-left: 0;
-  margin-bottom: 0;
-  margin-right: 0rem;
-  padding-left: 0;
- 
-}
-
-.orderpage_food_and_checkbox col-1 {
-  display: flex;
-  justify-content: center;
-
-} 
-
-
-
-
+  }
 
   .build_order_arrow {
     color: white;
@@ -179,54 +119,18 @@ justify-content: center;
   }
 
   .orderpage_food_box {
-  background-color: white;
-  display:block;
-  flex-direction: row;
-  min-width: fit-content;
-  width: auto;
-  flex-wrap: wrap;
-  padding: 0rem 0rem 0rem 0;
-  border: solid .12rem #d5d5d5;  
+    background-color: white;
+    display:block;
+    flex-direction: row;
+ 
+    flex-wrap: wrap;
+    border: solid .12rem  #d5d5d5;  
 
 }
-.orderpage_food_box_clicked {
-  background-color: white;
-  display:block;
-  flex-direction: column;
-  justify-content: center;
-  width: auto;
-  min-width: fit-content;
 
-  flex-wrap: wrap;
-  padding: 0rem 0rem 0rem 0;
-  border: solid .12rem black;  
 
-}
-.orderpage_checkmark {
-  /* margin-left: -13rem; */
-  margin-left: 5rem;
-  margin-top: -10rem;
-  margin-bottom: 4rem;
-  width:4rem;
-  height: 4rem;
-  color: black;
-  background-color: white;
-  border-radius: 50%;
-  z-index: 90;   
-} 
 
-.orderpage_checkmark_transparent {
-    /* margin-left: -13rem; */
-    margin-left: 5rem;
-    margin-top: -10rem;
-    margin-bottom: 4rem;
-    width:4rem;
-    height: 4rem;
-    color: transparent;
-    background-color: transparent;
-    border-radius: 50%;
-    z-index: 90;   
-}
+
 
 
 .orderpage_meal_options_display {
@@ -283,7 +187,7 @@ justify-content: center;
 @media screen and (min-width: 1151px) {
   .orderpage_food_box:hover {
     column-gap: 1rem;   
-    cursor: pointer;
+ 
     padding: 0rem 0rem 0rem 0;
     border: solid .12rem black; 
   } 
@@ -303,31 +207,21 @@ justify-content: center;
   font-family: var(--font-alt);
   display: block;
   padding: 1rem;
-
-  /* margin: .5rem 25% .5rem 3%; */
   flex-direction: row;
   justify-content: center;
 
 }
-
-
-
 
   @media screen and (max-width: 1150px) {
     .orderpage_grid:nth-child(2n) {
       padding: 0;
 
     }
-
     .order_page_hr {
       width: auto;
       margin: 0;
-      background-color: #d5d5d5; height: 1px; border: 0;
-  
-  }
-  
-
-
+      background-color: #d5d5d5; height: 1px; border: 0; 
+    }
     .orderpage_grid {
       padding: 0;
     }
@@ -336,16 +230,10 @@ justify-content: center;
       border-left: solid 1px #d5d5d5;
       border-right: solid 1px #d5d5d5;
       border-bottom: solid 1px #d5d5d5;
-
       background-color: white;
-      display:block;
-      flex-direction: row;
-      min-width: fit-content;
-      width: auto;
-      flex-wrap: wrap;
-      padding: 0rem 2rem 0rem 0;
+    
   
-    }
+    } 
 
     .orderpage_grid {
       font-family: var(--font-alt);
@@ -380,29 +268,11 @@ justify-content: center;
      }
     
   
-    .orderpage_food_box_clicked {
-      border-top: solid 1px white;
-      border-left: solid 1px #d5d5d5;
-      border-right: solid 1px #d5d5d5;
-      border-bottom: solid 1px #d5d5d5;
-      background-color: white;
-      display:block;
-      flex-direction: column;
-      justify-content: center;
-      width: auto;
-      min-width: fit-content;
-    
-      flex-wrap: wrap;
-      padding: 0rem 0rem 0rem 0;
-  
-    }
+   
     .orderpage_food_box:hover {
       cursor: pointer;
   
     }
-
-  
-  
 
     .meal_choices {
       display: flex;
@@ -410,7 +280,6 @@ justify-content: center;
       margin:0rem 2rem;
       flex-wrap: wrap;
     }
-
     .order_page_footer_contents {
       z-index: 94;
       position: sticky;
@@ -439,8 +308,7 @@ justify-content: center;
       margin-top: 0;
       background: rgb(249, 249, 249);
       padding:0;
-      /* justify-content: flex-start; */
-      /* border-top: solid .12rem #d5d5d5;   */
+    
   }
 
     .orderpage_meal_options_display {
@@ -484,41 +352,11 @@ justify-content: center;
       justify-content: center;
     }
 
-    .orderpage_checkmark {
-      /* margin-left: -13rem; */
-      margin-left: .5rem;
-      margin-top: -8rem;
-      margin-bottom: 2rem;
-      width:2.3rem;
-      height: 2.3rem;
-      color: black;
-      background-color: white;
-      border-radius: 50%;
-      z-index: 90;   
-    } 
+   
     
-    
-    .orderpage_checkmark_transparent {
-        margin-left: .5rem;
-        margin-top: -8rem;
-        margin-bottom: 2rem;
-        width:2.3rem;
-        height: 2.3rem;
-        color: transparent;
-        background-color: transparent;
-        border-radius: 50%;
-        z-index: 90;   
-    }
+   
 
-    .orderpage_food_title {
-      margin: auto;
-      margin-top:-5rem;
-      margin-bottom:2rem ;
-      margin-left: 9rem;
-      text-align: left;
-      font-size: 1.2rem;
-      justify-content: flex-start;
-    }
+   
 
   
 
@@ -540,15 +378,8 @@ justify-content: center;
   }
 
 
-  .orderpage_grid {
-/* margin: 0 .7rem;   */
-}
+ 
 
-  .orderpage_food_box{
-    display: block;
-    grid-row: 0;
-    min-width: fit-content;
-  }
 
   .build_order_footer {
    justify-content: center;

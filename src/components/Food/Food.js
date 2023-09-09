@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { MdCheckCircle, MdCheckCircleOutline } from "react-icons/md";
 import "./Food.css";
 import styled from "styled-components";
-import { CaloriesPrice } from "../../sharedStyleds";
+import { CaloriesPrice, Calories, Price, New } from "../../sharedStyleds";
 
 const FoodBox = styled.div`
   border: solid 1px white;
@@ -38,6 +38,24 @@ const FoodTitle = styled.h3`
   }
 `;
 
+const Subheading = styled.div`
+  display: flex;
+  margin-left: 15rem;
+  margin-top: -0.2rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  font-family: var(--font-long);
+  color: rgba(68, 20, 20, 0.721);
+
+  @media (max-width: 650px) {
+    font-size: 1rem;
+    display: flex;
+    margin-left: 8rem;
+    margin-top: 0rem;
+  }
+`;
+
 export default function Food(props) {
   const { food, onAdd, cartItems, mealArrString } = props;
   const mealArr = [mealArrString];
@@ -50,7 +68,8 @@ export default function Food(props) {
   const parsedMealString = JSON.parse(mealString);
 
   const inCart = !!cartItems.find((x) => x.id === food.id);
-
+  const isZero = !!food.price == 0;
+  const isNew = !!food.new == "new";
   const SelectedBox = ({ onClick, isinCart }) => {
     const text = (
       <div
@@ -65,11 +84,11 @@ export default function Food(props) {
         <div>
           <FoodTitle>{food.name}</FoodTitle>
           <CaloriesPrice>
-            <div className="food_calories">{food.calories}</div>
-            <div className="food_price">${food.price}</div>
+            <Calories>{food.calories}</Calories>
+            <Price>{!isZero && `$${food.price}`}</Price>
           </CaloriesPrice>
-          <div className="food_new">{food.new}</div>
-          <div className="food_subheading">{food.subheading}</div>
+          <New>{!isNew && food.new}</New>
+          <Subheading>{food.subheading}</Subheading>
         </div>
       </div>
     );

@@ -536,7 +536,7 @@ body {
 
   }
 }
-.topitoff_contents div.food_price:last-child {
+.topitoff_contents {
   display: none;
   }
 
@@ -571,23 +571,7 @@ body {
 }
 
 
-.protein_contents div.food_new {
-  font-size: 1rem;
-  color: white;
-  background-color: #bf0008; 
-  border-radius: 10%; 
-  display: flex;
-  /* float: inline-start; */
-  width: 50px;
-  justify-content: center;    
-  letter-spacing: .065em;
-  margin-left: 8.0rem;
-  margin-top: -3.37rem;
-  /* 
-  margin-bottom: -4rem;*/
-  /* padding:.3rem; */
 
-}
 
 .topitoff_contents div.food_price:last-child {
 display: none;

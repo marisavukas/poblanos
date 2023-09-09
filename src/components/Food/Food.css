@@ -16,13 +16,6 @@
 
 
 
-.food_calories {
-  margin-left: 15rem;
-  /* margin-bottom: 0; */
-  font-family: var(--font-text);
-  color: rgba(68, 20, 20, 0.721);
-  font-size: 1.25rem;
-}
 
 .food_box {
   background-color: white;
@@ -37,16 +30,6 @@
 
 
 
-.food_subheading {
-  display:flex;
-  margin-left: 15rem;
-  margin-top: -.2rem;
-  font-size: 1.25rem;
-  font-weight: 600;
-  letter-spacing: .05em;
-  font-family: var(--font-long);
-  color: rgba(68, 20, 20, 0.721);
-}
 
 
 .build_order_hr {
@@ -100,25 +83,17 @@
 
   }
 
-  /* .food_stuff .grid .food_box {
-    display: flex;
-    justify-content: center;
-  } */
+  
 
   .food_stuff:last-child {
     justify-content: flex-start;}
-/* 
-.grid:last-child .food_stuff{
-  justify-content: flex-start;
-} */
+
 
 } 
 .food_stuff{
   justify-content: center;
 }
-/* .food_stuff{
-  justify-content: center;
-} */
+
 
 
 
@@ -157,8 +132,7 @@
     background-color: #d5d5d5; height: 1px; border: 0;
   }  
 
-  .food_calories {
-    margin-left: 8rem;}
+
 
   }
 
@@ -177,21 +151,8 @@ margin: 0 .7rem;
   }
 
 
-  .food_title:first-child {
-    font-size:1.5rem;
-    margin-top: -6rem;
-    margin-left: 8rem;
-    margin-bottom: -.2rem;
-    padding-right: 0rem;
-  }
+  
 
-  .food_calories {
-    margin-left: 8rem;
-
-    font-family: var(--font-text);
-    color: rgba(68, 20, 20, 0.721);
-    font-size: 1.1rem;
-  }
 
   .checkmark {
     margin-left: -8rem;
@@ -205,16 +166,7 @@ margin: 0 .7rem;
     z-index: 90;   
   } 
 
-.food_subheading {
-  display:flex;
-  margin-left: 8rem;
-  margin-top: 0rem;
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: .05em;
-  font-family: var(--font-long);
-  color: rgba(68, 20, 20, 0.721);
+ 
 
-}
   
 }
