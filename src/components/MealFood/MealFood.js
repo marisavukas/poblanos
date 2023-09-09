@@ -33,20 +33,18 @@ const OrderPageTitle = styled.h3`
 const MdCheckCircleTransparent = styled(MdCheckCircle)`
   width: 4rem;
   height: 4rem;
-  bottom: 0;
-  color: transparent;
-  background-color: transparent;
-  border-radius: 50%;
+  color: black;
+  margin-left: 3rem;
   position: absolute;
+  margin-top: 3rem;
+  background-color: white;
+  border-radius: 50%;
   z-index: 90;
   @media (max-width: 650px) {
-    margin-left: 0.5rem;
-    margin-top: -8rem;
-    margin-bottom: 2rem;
     width: 2.3rem;
     height: 2.3rem;
-    color: transparent;
-    background-color: transparent;
+    color: black;
+    background-color: white;
     border-radius: 50%;
     z-index: 90;
   }

@@ -4,26 +4,23 @@ import "./Food.css";
 import styled from "styled-components";
 import { CaloriesPrice, Calories, Price, New } from "../../sharedStyleds";
 
-const FoodBox = styled.div`
-  border: solid 1px white;
-  border-bottom: solid 1px #d5d5d5;
-  border-left: solid 1px #d5d5d5;
-  border-right: solid 1px #d5d5d5;
+// const FoodBox = styled.div`
+//   border: solid 1px white;
+//   border-bottom: solid 1px #d5d5d5;
+//   border-left: solid 1px #d5d5d5;
+//   border-right: solid 1px #d5d5d5;
 
-  @media (max-width: 1150px) {
-    border-top: solid 1px white;
-    border-bottom: solid 1px #d5d5d5;
-    border-left: solid 1px #d5d5d5;
-    border-right: solid 1px #d5d5d5;
-  }
-`;
+//   @media (max-width: 1150px) {
+//     border-top: solid 1px white;
+//     border-bottom: solid 1px #d5d5d5;
+//     border-left: solid 1px #d5d5d5;
+//     border-right: solid 1px #d5d5d5;
+//   }
+// `;
 
 const FoodTitle = styled.h3`
   font-size: 2rem;
   letter-spacing: 0.06rem;
-  margin-top: -9rem;
-  margin-left: 15rem;
-  margin-bottom: -0.2rem;
   padding-right: 0rem;
   flex-wrap: wrap;
   width: fit-content;
@@ -31,17 +28,12 @@ const FoodTitle = styled.h3`
 
   @media (max-width: 650px) {
     font-size: 1.5rem;
-    margin-top: -6rem;
-    margin-left: 8rem;
-    margin-bottom: -0.2rem;
     padding-right: 0rem;
   }
 `;
 
 const Subheading = styled.div`
   display: flex;
-  margin-left: 15rem;
-  margin-top: -0.2rem;
   font-size: 1.25rem;
   font-weight: 600;
   letter-spacing: 0.05em;
@@ -50,10 +42,12 @@ const Subheading = styled.div`
 
   @media (max-width: 650px) {
     font-size: 1rem;
-    display: flex;
-    margin-left: 8rem;
-    margin-top: 0rem;
   }
+`;
+
+const FoodContainer = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
 
 export default function Food(props) {
@@ -78,18 +72,24 @@ export default function Food(props) {
         style={{ borderColor: isinCart ? "#d5d5d5" : "black" }}
       >
         <div>
-          <img className="small" src={food.image} alt={food.name} />
           {inCart && <MdCheckCircle fontSize={59} className="checkmark" />}
+          <img
+            className="small"
+            style={{ position: "relative" }}
+            src={food.image}
+            alt={food.name}
+          />
         </div>
-        <div>
+        <FoodContainer>
           <FoodTitle>{food.name}</FoodTitle>
+          <New>{!isNew && food.new}</New>
           <CaloriesPrice>
             <Calories>{food.calories}</Calories>
             <Price>{!isZero && `$${food.price}`}</Price>
           </CaloriesPrice>
-          <New>{!isNew && food.new}</New>
+
           <Subheading>{food.subheading}</Subheading>
-        </div>
+        </FoodContainer>
       </div>
     );
 

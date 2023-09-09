@@ -22,16 +22,9 @@ body {
   a {
     text-decoration: none;
   }
-  /* .food_options {
-    display: inline;
-    justify-content: space-between;
-    margin: 30px;
-  } */
+
   .grid {
     min-width: 46vw;
-    /* grid-template-columns: 20% 20%; */
-    /* display: grid; */
-    /* margin: 0rem 1rem 0px 1rem; */
     font-family: var(--font-alt);
 
   }
@@ -47,25 +40,19 @@ body {
   }
 
 
-
   .build_order_meal_title {
     font-size: 4rem;
     width: fit-content;
     text-transform: uppercase;
     margin-bottom: 0rem;
     padding-bottom: 0rem;
-
-
     height: auto;
     color: rgb(68, 20, 20);
     font-family: var(--font-alt);
-
     text-align: left;
 
-    
   }
 
-  
 
   .build_your {
     text-align: left;
@@ -75,8 +62,6 @@ body {
     font-family: var(--font-long);
     font-weight: 600;
   }
-
-  
 
   .build_order_meal_description {
     font-family: var(--font-long);
@@ -91,8 +76,6 @@ body {
   }
 
 
-
-
   .text-right {
     text-align: right;
   }
@@ -100,19 +83,11 @@ body {
     max-height: 10rem;
     width: 15rem;
     height: 10rem;
-    /* cursor: pointer; */
     margin-left: 0;
     margin-bottom: 0;
     margin-right: 2rem;
     padding-left: 0;
    
-
-    /* linear-gradient(
-      to top, 
-      red, 
-      white(0, 0, 0, 0)
-    ) 1 100%; */
-
   }
 
   img.large {
@@ -126,14 +101,6 @@ body {
     padding-left: 0;
   }
 
-/* 
-  img.small:hover {
-    border-width: 1rem;
-    border: solid 5px #bf0008;
-    margin: auto;
-  } */
-  /* .basket_section {display:none;} */
-
   
   .order_header {
     font-family: var(--font-base);
@@ -146,34 +113,9 @@ body {
     margin-bottom: 2rem;
   }
 
-  .food_header {
-    font-family: var(--font-alt);
-    color: rgb(68, 20, 20);
-    font-size: 2.7rem;
-    letter-spacing: .06em;
-    margin-left: 1rem;
-    text-transform: uppercase;
-  }
-
-  .food_description {
-    font-family: var(--font-long);
-    font-size: 1.5rem;
-    letter-spacing: .04em;
-    font-weight: bolder;
-    flex-direction: row;
-    display: flex;
-    margin: 0rem 1rem;
-    padding: auto;
-    color: rgba(68, 20, 20, 0.721);
+ 
 
 
-  }
-
-  .food_header:first-child {
-    margin-top: .5rem;
-
-    
-  }
 
 
   .order_button:hover {
@@ -185,9 +127,7 @@ body {
   .col-1 {
     flex: 1;
   }
-  /* .col-2 {
-    flex: 0;
-  }  */
+ 
 
 
 
@@ -329,26 +269,7 @@ body {
 }
 
 
-.back_to_menu_underline_button  {
-  color: rgb(68, 20, 20);
-  cursor: pointer;
-  display: block;
-  background-color: white;
-  justify-content: flex-end;
-  z-index:2;
-  text-transform: uppercase;
-  width: auto;
-  font-size: 1.5rem;
-  color: rgb(68, 20, 20);
-  border-style: none;
-  border-bottom: 2px solid rgb(68, 20, 20);
-  margin-right:5%;
-  margin-left: auto;
-  padding: 0;
-  font-family: var(--font-alt);
-  letter-spacing: .12em;
-  text-align: right;
-}
+
 
 
 
@@ -356,14 +277,7 @@ body {
 
 
 @media screen and (min-width: 1151px) {
-  /* .choose_build_order_items{
-    display: flex;
-    width: fit-content;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  } */
- 
+
   .grid {
     /* justify-content: space-between; */
     width:40%;
@@ -391,12 +305,8 @@ body {
 
 
 @media screen and (max-width:1150px) {
-  /* .food_stuff {
-    border: solid 1px black;
-  } */
-  .back_to_menu_underline_button  {
-    display: none;
-    }
+
+
   .protein_contents div.food_new {
     margin-top: -3.4rem;
     margin-left: 8rem;
@@ -404,9 +314,7 @@ body {
   }
   
   .checkmark {
-    margin-left: -8.0rem;
-    margin-right: 7.5rem;
-    margin-bottom: 1.8rem;
+
     width:3rem;
     height: 3rem;
     color: black;
@@ -451,16 +359,6 @@ body {
     width:auto;
   }
 
-  .food_header {
-    font-size: 2.0rem;
-    letter-spacing: .06em;
-    font-weight: 100;
-    margin: auto;
-    padding: 1rem;
-    text-transform: uppercase;
-    background-color: whitesmoke;
-  }
-
 
  .build_your_text_contents {
   margin: 2rem 1rem 2rem 1rem;
@@ -482,18 +380,13 @@ body {
   }
   
   img.large {
-    /* cursor: pointer; */
    margin: auto;
-    /* padding-left: 0; */
     display: flex;
     justify-content: center;
-
-    
     text-align: center;
     max-height: 15rem;
     width: 19rem;
     height: 12rem;
-    /* cursor: pointer; */
    
   }
   .topitoff_contents div.food_price {

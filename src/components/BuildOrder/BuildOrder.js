@@ -1,17 +1,75 @@
 import React, { useEffect, useState } from "react";
 import data from "../../constants/data";
-import Basket from "../Basket/Basket";
 import Main from "../Main/Main";
-
-import Checkout from "../Checkout/Checkout";
-import { MdCheckCircle } from "react-icons/md";
-
-import { BsFillArrowLeftCircleFill } from "react-icons/bs";
-
 import { BrowserRouter, Route, Link } from "react-router-dom";
 import "./BuildOrder.css";
-import Food from "../Food/Food";
-import { mealoptions } from "../../constants";
+import styled from "styled-components";
+
+const FoodHeader = styled.h2`
+  font-family: var(--font-alt);
+  color: rgb(68, 20, 20);
+  font-size: 2.7rem;
+  letter-spacing: 0.06em;
+  margin-left: 1rem;
+  text-transform: uppercase;
+
+  @media (max-width: 1150px) {
+    font-size: 2rem;
+    letter-spacing: 0.06em;
+    font-weight: 100;
+    margin: auto;
+    padding: 1rem;
+    text-transform: uppercase;
+    background-color: whitesmoke;
+  }
+`;
+
+const FoodDescription = styled.h3`
+  font-family: var(--font-long);
+  font-size: 1.5rem;
+  letter-spacing: 0.04em;
+  font-weight: bolder;
+  flex-direction: row;
+  display: flex;
+  margin: 0rem 1rem;
+  padding: auto;
+  color: rgba(68, 20, 20, 0.721);
+
+  @media (max-width: 1150px) {
+    display: none;
+  }
+`;
+
+const MenuButton = styled.button`
+  color: rgb(68, 20, 20);
+  cursor: pointer;
+  display: block;
+  background-color: white;
+  justify-content: flex-end;
+  z-index: 2;
+  text-transform: uppercase;
+  width: auto;
+  font-size: 1.5rem;
+  color: rgb(68, 20, 20);
+  border-style: none;
+  border-bottom: 2px solid rgb(68, 20, 20);
+  margin-right: 5%;
+  margin-left: auto;
+  padding: 0;
+  font-family: var(--font-alt);
+  letter-spacing: 0.12em;
+  text-align: right;
+
+  @media (max-width: 1150px) {
+    display: none;
+  }
+`;
+
+const ButtonContainer = styled(Link)`
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+`;
 
 const BuildOrder = (props) => {
   const {
@@ -28,7 +86,6 @@ const BuildOrder = (props) => {
 
   const { mealArrString } = props;
 
-  const [optionSelected, setOptionSelected] = useState(false);
   const [topItOffItems, setTopItOffItems] = useState([]);
   const [proteinItems, setProteinItems] = useState([]);
   const [riceItems, setRiceItems] = useState([]);
@@ -75,7 +132,6 @@ const BuildOrder = (props) => {
   };
 
   const onRemoveQuantity = (food) => {
-    // setCheck(false);
     console.log("removed");
     const exist = tacoQuantityItems.find((x) => x.id === food.id);
     if (exist.qty === 1) {
@@ -95,7 +151,6 @@ const BuildOrder = (props) => {
   };
 
   const onRemoveTortilla = (food) => {
-    // setCheck(false);
     console.log("removed");
     const exist = tortillaItems.find((x) => x.id === food.id);
     if (exist.qty === 1) {
@@ -114,7 +169,6 @@ const BuildOrder = (props) => {
   };
 
   const onRemoveTopItOff = (food) => {
-    // setCheck(false);
     console.log("removed");
     const exist = topItOffItems.find((x) => x.id === food.id);
     if (exist.qty === 1) {
@@ -134,8 +188,6 @@ const BuildOrder = (props) => {
   };
 
   const onRemoveProtein = (food) => {
-    // setCheck(false);
-    console.log("removed");
     const exist = proteinItems.find((x) => x.id === food.id);
     if (exist.qty === 1) {
       setProteinItems(proteinItems.filter((x) => x.id !== food.id));
@@ -154,9 +206,7 @@ const BuildOrder = (props) => {
   };
 
   const onRemoveRice = (food) => {
-    // setCheck(false);
     console.log("removed");
-
     const exist = riceItems.find((x) => x.id === food.id);
     if (exist.qty === 1) {
       setRiceItems(riceItems.filter((x) => x.id !== food.id));
@@ -175,8 +225,6 @@ const BuildOrder = (props) => {
   };
 
   const onRemoveBeans = (food) => {
-    // console.log("removed");
-
     const exist = beansItems.find((x) => x.id === food.id);
     if (exist.qty === 1) {
       setBeansItems(beansItems.filter((x) => x.id !== food.id));
@@ -194,17 +242,11 @@ const BuildOrder = (props) => {
   };
 
   const onRemoveSide = (food) => {
-    // setCheck(false);
     console.log("removed");
     const exist = sideItems.find((x) => x.id === food.id);
     if (exist.qty === 1) {
       setSideItems(sideItems.filter((x) => x.id !== food.id));
     } else {
-      // setSideItems(
-      //   sideItems.map((x) =>
-      //     x.id === food.id ? { ...exist, qty: exist.qty - 1 } : x
-      //   )
-      // );
     }
   };
 
@@ -294,7 +336,7 @@ const BuildOrder = (props) => {
             (item) =>
               item.id === "3" && (
                 <>
-                  <h2 className="food_header">Choose Quantity</h2>
+                  <FoodHeader>Choose Quantity</FoodHeader>
                   <div className="quantity_contents">
                     <Main
                       foods={quantity}
@@ -303,7 +345,7 @@ const BuildOrder = (props) => {
                     ></Main>
                   </div>
 
-                  <h2 className="food_header">Tortilla</h2>
+                  <FoodHeader>Tortilla</FoodHeader>
                   <div className="tortilla_contents">
                     <Main
                       foods={tortilla}
@@ -328,7 +370,7 @@ const BuildOrder = (props) => {
                     </button>
                   </Link>
 
-                  <h2 className="food_header">Sides</h2>
+                  <FoodHeader>Sides</FoodHeader>
                   <div className="side_contents">
                     <Main
                       foods={side}
@@ -336,7 +378,7 @@ const BuildOrder = (props) => {
                       cartItems={sideItems}
                     ></Main>
                   </div>
-                  <h2 className="food_header">Drinks</h2>
+                  <FoodHeader>Drinks</FoodHeader>
                   <div className="drink_contents">
                     <Main
                       foods={drink}
@@ -352,18 +394,15 @@ const BuildOrder = (props) => {
             (item) =>
               item.id != "4" && (
                 <>
-                  <h2 className="food_header">Protein or Veggie</h2>
-                  <Link
-                    to="/OrderPage"
-                    className="back_to_menu_button_container"
-                  >
-                    <button className="back_to_menu_underline_button">
-                      Back To Menu
-                    </button>
-                  </Link>
-                  <h3 className="food_description">
+                  <FoodHeader>Protein or Veggie</FoodHeader>
+         
+                    <ButtonContainer to="/OrderPage">
+                      <MenuButton>Back To Menu</MenuButton>
+                    </ButtonContainer>
+           
+                  <FoodDescription>
                     Choose one of the following.
-                  </h3>
+                  </FoodDescription>
                   <div className="protein_contents">
                     <Main
                       foods={proteins}
@@ -371,10 +410,10 @@ const BuildOrder = (props) => {
                       cartItems={proteinItems}
                     ></Main>
                   </div>
-                  <h2 className="food_header">Rice</h2>
-                  <h3 className="food_description">
+                  <FoodHeader>Rice</FoodHeader>
+                  <FoodDescription>
                     Choose one of the following.
-                  </h3>
+                  </FoodDescription>
                   <div className="rice_contents">
                     <Main
                       foods={rice}
@@ -382,10 +421,10 @@ const BuildOrder = (props) => {
                       cartItems={riceItems}
                     ></Main>
                   </div>
-                  <h2 className="food_header">Beans</h2>
-                  <h3 className="food_description">
+                  <FoodHeader>Beans</FoodHeader>
+                  <FoodDescription>
                     Choose one of the following.
-                  </h3>
+                  </FoodDescription>
                   <div className="bean_contents">
                     <Main
                       foods={beans}
@@ -393,7 +432,7 @@ const BuildOrder = (props) => {
                       cartItems={beansItems}
                     ></Main>
                   </div>
-                  <h2 className="food_header">Top it off</h2>
+                  <FoodHeader>Top it off</FoodHeader>
                   <div className="topitoff_contents">
                     <Main
                       foods={addOns}
@@ -401,7 +440,7 @@ const BuildOrder = (props) => {
                       cartItems={topItOffItems}
                     ></Main>
                   </div>
-                  <h2 className="food_header">Sides</h2>
+                  <FoodHeader>Sides</FoodHeader>
                   <div className="side_contents">
                     <Main
                       foods={side}
@@ -409,7 +448,7 @@ const BuildOrder = (props) => {
                       cartItems={sideItems}
                     ></Main>
                   </div>
-                  <h2 className="food_header">Drinks</h2>
+                  <FoodHeader>Drinks</FoodHeader>
                   <div className="drink_contents">
                     <Main
                       foods={drink}
