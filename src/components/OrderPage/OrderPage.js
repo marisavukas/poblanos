@@ -44,20 +44,12 @@ const OrderPage = (props) => {
           Choose One Of The Following.
         </div>
         <div x={mealItems.length}></div>
-
-        {/* <div x={mealItems.length}></div> */}
         <MealMain
           foodsMeal={burrito_bowl_chips_sides}
           onAddMeal={onAddMeal}
           mealItems={mealItems}
-        ></MealMain>
-        <div className="basket_section">
-          {/* {mealItems.map((item) => (
-        <div className="row">
-          <div className="row-2">{item.name}</div>
-        </div>
-      ))} */}
-        </div>
+        />
+        <br />
         <div className="build_order_footer">
           <div className="order_page_footer_contents"></div>
           <Link to="/buildorder">
