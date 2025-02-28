@@ -1,10 +1,7 @@
-import React, { useEffect } from "react";
-import "./Navbar.css";
+import React from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { MdOutlineRestaurantMenu } from "react-icons/md";
-import { MdOutlineShoppingBag } from "react-icons/md";
-import BuildOrder from "../BuildOrder/BuildOrder";
-import OrderPage from "../OrderPage/OrderPage";
+import { MdOutlineRestaurantMenu, MdOutlineShoppingBag } from "react-icons/md";
+import "./Navbar.css";
 
 import images from "../../constants/images";
 
@@ -12,7 +9,6 @@ import { Link } from "react-router-dom";
 
 const Navbar = (props) => {
   const [toggleMenu, setToggleMenu] = React.useState(false);
-  const { mealItems, setMealItems } = props;
 
   const handleAddToCart = () => {
     const mealSelected = JSON.parse(
@@ -36,7 +32,6 @@ const Navbar = (props) => {
     };
 
     let existingCart = JSON.parse(window.localStorage.getItem("cart"));
-    // reset cart if invalid data is in storage:
     if (!Array.isArray(existingCart)) {
       existingCart = [];
     }
@@ -62,9 +57,6 @@ const Navbar = (props) => {
           <li className="p__opensans">
             <Link to="/ourvalues">About</Link>
           </li>
-          {/* <li className="p__opensans">
-            <Link to="/contact">Contact</Link>
-          </li> */}
         </ul>
         <Link to="/checkout" onClick={handleAddToCart}>
           <>
@@ -79,13 +71,6 @@ const Navbar = (props) => {
       <div className="app__navbar-login"></div>
 
       <div className="app__navbar-smallscreen">
-        {/* <div className="back_to_menu_container">
-        <div className="back_to_menu">
-        <Link to = "/mealoptions">Return to Menu</Link>
-
-
-        </div>
-      </div> */}
 
         <GiHamburgerMenu
           className="hamburger_icon"
@@ -117,9 +102,7 @@ const Navbar = (props) => {
                 </Link>
               </li>
               <li>
-                {/* <Link to="/contact" onClick={() => setToggleMenu(false)}>
-                  Contact
-                </Link> */}
+
               </li>
               <li>
                 <Link to="/checkout" onClick={() => setToggleMenu(false)}>

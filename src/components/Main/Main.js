@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Food from "../Food/Food";
 
 import "./Main.css";
-import Basket from "../Basket/Basket";
 
 export default function Main(props) {
-  const { foods, onAdd, cartItems, bagArr } = props;
+  const { foods, onAdd, cartItems } = props;
 
   return (
     <main>

@@ -1,17 +1,11 @@
-import React, { useEffect, useState } from "react";
-import { MdCheckCircle, MdCheckCircleOutline } from "react-icons/md";
+import React from "react";
+import { MdCheckCircle } from "react-icons/md";
 import "./Food.css";
 
 export default function Food(props) {
   const { food, onAdd, cartItems, mealArrString } = props;
   const mealArr = [mealArrString];
 
-  const mealString = window.localStorage.getItem(
-    "meal-selected",
-    JSON.stringify(mealArr)
-  );
-
-  const parsedMealString = JSON.parse(mealString);
 
   const inCart = !!cartItems.find((x) => x.id === food.id);
 

@@ -1,22 +1,10 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import Basket from "../Basket/Basket";
-import BuildOrder from "../BuildOrder/BuildOrder";
-import OrderPage from "../OrderPage/OrderPage";
+import React from "react";
 import { BsArrowRight } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 import "./Checkout.css";
 
 const Checkout = (props) => {
-  const [bagItems, setBagItems] = useState([]);
-  const { bagArr, mealArrString, cartTotal } = props;
-
-  const mealString = window.localStorage.getItem(
-    "meal-selected",
-    JSON.stringify(mealArrString)
-  );
-
-  const parsedMealString = JSON.parse(mealString);
 
   const subtotalAmountString = window.localStorage.getItem("cart-total");
   const subtotalAmountNumber = parseFloat(subtotalAmountString).toFixed(2);

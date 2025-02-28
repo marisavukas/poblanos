@@ -1,17 +1,15 @@
 import React, { useState } from "react";
 import "./OrderPage.css";
 
+import { useEffect } from "react";
+import { BsArrowRight } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { mealoptions } from "../../constants";
 import MealMain from "../MealMain/MealMain";
-import { useEffect } from "react";
-import Basket from "../Basket/Basket";
-import { BsArrowRight } from "react-icons/bs";
 
 const OrderPage = (props) => {
   const { burrito_bowl_chips_sides } = mealoptions;
   const [mealItems, setMealItems] = useState([]);
-  const [toggleMenu, setToggleMenu] = React.useState(false);
 
   useEffect(() => {
     window.localStorage.setItem("meal-selected", JSON.stringify(mealItems));
@@ -28,8 +26,6 @@ const OrderPage = (props) => {
   };
 
   const onRemoveMeal = (foodMeal) => {
-    // setCheck(false);
-    console.log("removed");
     const exist = mealItems.find((x) => x.id === foodMeal.id);
     if (exist.qty === 1) {
       setMealItems(mealItems.filter((x) => x.id !== foodMeal.id));
@@ -44,19 +40,12 @@ const OrderPage = (props) => {
           Choose One Of The Following.
         </div>
         <div x={mealItems.length}></div>
-
-        {/* <div x={mealItems.length}></div> */}
         <MealMain
           foodsMeal={burrito_bowl_chips_sides}
           onAddMeal={onAddMeal}
           mealItems={mealItems}
         ></MealMain>
         <div className="basket_section">
-          {/* {mealItems.map((item) => (
-        <div className="row">
-          <div className="row-2">{item.name}</div>
-        </div>
-      ))} */}
         </div>
         <div className="build_order_footer">
           <div className="order_page_footer_contents"></div>

@@ -1,21 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import data from "../../constants/data";
-import Basket from "../Basket/Basket";
 import Main from "../Main/Main";
 
-import Checkout from "../Checkout/Checkout";
-import { MdCheckCircle } from "react-icons/md";
 
-import { BsFillArrowLeftCircleFill } from "react-icons/bs";
 
-import { BrowserRouter, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./BuildOrder.css";
-import Food from "../Food/Food";
-import { mealoptions } from "../../constants";
 
 const BuildOrder = (props) => {
   const {
-    foods,
     proteins,
     addOns,
     rice,
@@ -28,7 +21,6 @@ const BuildOrder = (props) => {
 
   const { mealArrString } = props;
 
-  const [optionSelected, setOptionSelected] = useState(false);
   const [topItOffItems, setTopItOffItems] = useState([]);
   const [proteinItems, setProteinItems] = useState([]);
   const [riceItems, setRiceItems] = useState([]);
@@ -38,7 +30,7 @@ const BuildOrder = (props) => {
   const [sideItems, setSideItems] = useState([]);
   const [drinkItems, setDrinkItems] = useState([]);
 
-  const bagArr = [
+  const bagArr = useMemo(() => [
     ...proteinItems,
     ...riceItems,
     ...beansItems,
@@ -47,8 +39,8 @@ const BuildOrder = (props) => {
     ...tacoQuantityItems,
     ...sideItems,
     ...drinkItems,
-  ];
-  const inCartQuantity = !!bagArr.find((x) => x.id === quantity.id);
+  ], [proteinItems, riceItems, beansItems, topItOffItems, tortillaItems, 
+      tacoQuantityItems, sideItems, drinkItems]);
 
   const mealArr = [mealArrString];
 
@@ -68,15 +60,12 @@ const BuildOrder = (props) => {
     if (!exist) {
       tacoQuantityItems.pop();
       setTacoQuantityItems([...tacoQuantityItems, { ...food, qty: 1 }]);
-      console.log(parsedMealString);
     } else {
       onRemoveQuantity(food);
     }
   };
 
   const onRemoveQuantity = (food) => {
-    // setCheck(false);
-    console.log("removed");
     const exist = tacoQuantityItems.find((x) => x.id === food.id);
     if (exist.qty === 1) {
       setTacoQuantityItems(tacoQuantityItems.filter((x) => x.id !== food.id));
@@ -95,8 +84,6 @@ const BuildOrder = (props) => {
   };
 
   const onRemoveTortilla = (food) => {
-    // setCheck(false);
-    console.log("removed");
     const exist = tortillaItems.find((x) => x.id === food.id);
     if (exist.qty === 1) {
       setTortillaItems(tortillaItems.filter((x) => x.id !== food.id));
@@ -114,8 +101,6 @@ const BuildOrder = (props) => {
   };
 
   const onRemoveTopItOff = (food) => {
-    // setCheck(false);
-    console.log("removed");
     const exist = topItOffItems.find((x) => x.id === food.id);
     if (exist.qty === 1) {
       setTopItOffItems(topItOffItems.filter((x) => x.id !== food.id));
@@ -134,8 +119,6 @@ const BuildOrder = (props) => {
   };
 
   const onRemoveProtein = (food) => {
-    // setCheck(false);
-    console.log("removed");
     const exist = proteinItems.find((x) => x.id === food.id);
     if (exist.qty === 1) {
       setProteinItems(proteinItems.filter((x) => x.id !== food.id));
@@ -154,8 +137,6 @@ const BuildOrder = (props) => {
   };
 
   const onRemoveRice = (food) => {
-    // setCheck(false);
-    console.log("removed");
 
     const exist = riceItems.find((x) => x.id === food.id);
     if (exist.qty === 1) {
@@ -175,7 +156,6 @@ const BuildOrder = (props) => {
   };
 
   const onRemoveBeans = (food) => {
-    // console.log("removed");
 
     const exist = beansItems.find((x) => x.id === food.id);
     if (exist.qty === 1) {
@@ -194,18 +174,10 @@ const BuildOrder = (props) => {
   };
 
   const onRemoveSide = (food) => {
-    // setCheck(false);
-    console.log("removed");
     const exist = sideItems.find((x) => x.id === food.id);
     if (exist.qty === 1) {
       setSideItems(sideItems.filter((x) => x.id !== food.id));
-    } else {
-      // setSideItems(
-      //   sideItems.map((x) =>
-      //     x.id === food.id ? { ...exist, qty: exist.qty - 1 } : x
-      //   )
-      // );
-    }
+    } 
   };
 
   const onAddDrink = (food) => {
@@ -219,8 +191,6 @@ const BuildOrder = (props) => {
   };
 
   const onRemoveDrink = (food) => {
-    // setCheck(false);
-    console.log("removed");
     const exist = drinkItems.find((x) => x.id === food.id);
     if (exist.qty === 1) {
       setDrinkItems(drinkItems.filter((x) => x.id !== food.id));
@@ -259,7 +229,6 @@ const BuildOrder = (props) => {
     let sumArr = [];
     existingCart.map((x) => {
       x.ingredients.map((item) => sumArr.push(item.price));
-      console.log(sumArr);
     });
 
     let sum = 0;
@@ -267,7 +236,6 @@ const BuildOrder = (props) => {
       sum += sumArr[i];
     }
 
-    console.log(sum);
     window.localStorage.setItem("cart-total", JSON.stringify(sum));
   };
 

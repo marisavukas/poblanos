@@ -1,15 +1,13 @@
 import React from "react";
 import Layout from "./Layout";
 import {
-  Navbar,
   BuildOrder,
-  Home,
-  OurValues,
   Checkout,
-  OrderPage,
   EndOfDemo,
+  Home,
+  OrderPage,
+  OurValues
 } from "./components";
-import { Footer } from "./container";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";

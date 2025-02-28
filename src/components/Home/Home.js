@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { meal } from "../../constants";
-import { Link } from "react-router-dom";
-import { Footer } from "../../container";
 
 const HomePage = styled.div`
   height: 100vh;
@@ -145,7 +144,6 @@ const OrderButton = styled.button`
 `;
 
 const Home = () => {
-  const [playVideo, setPlayVideo] = useState(false);
   const vidRef = React.useRef();
   return (
     <HomePage>

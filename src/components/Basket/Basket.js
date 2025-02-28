@@ -1,9 +1,8 @@
 import React from "react";
-import { useEffect } from "react";
 import "./Basket.css";
 
 export default function Basket(props) {
-  const { cartItems, onAdd, onRemove, bagArr } = props;
+  const { onAdd, onRemove, bagArr } = props;
   const bagArrString = window.localStorage.getItem(
     "build-order-items",
     JSON.stringify(bagArr)
@@ -13,9 +12,6 @@ export default function Basket(props) {
   const itemsPrice = parsedBagArr.reduce((a, c) => a + c.qty * c.price, 0);
   const taxPrice = itemsPrice * 0.14;
   const totalPrice = itemsPrice + taxPrice;
-  //   const shippingPrice = itemsPrice > 2000 ? 0 : 20;
-
-  //
 
   return (
     <div className="basket_box">
