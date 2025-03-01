@@ -1,7 +1,7 @@
-import burrito from "../assets/burrito.png";
-import burritobowl from "../assets/burritobowl.png";
-import chipsandsides from "../assets/chipsandsides.png";
-import tacos from "../assets/tacos.png";
+import burrito from "../assets/burrito.webp";
+import burritobowl from "../assets/burritobowl.webp";
+import chipsandsides from "../assets/chipsandsides.webp";
+import tacos from "../assets/tacos.webp";
 
 const mealoptions = {
   burrito_bowl_chips_sides: [
